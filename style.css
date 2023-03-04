@@ -40,7 +40,7 @@
 .info-container{
     /* background-color: green; */
     height: 58vh;
-    width: 80vw;
+    width: max-content;
     margin: 144px auto;
     display: flex;
     justify-content: space-around;
