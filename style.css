@@ -39,8 +39,9 @@
 
 .info-container{
     /* background-color: green; */
+    /* position: fixed; */
     height: 58vh;
-    width: max-content;
+    width: 80vw;
     margin: 144px auto;
     display: flex;
     justify-content: space-around;
