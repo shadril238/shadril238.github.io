@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Hybrid Log Classification illustration">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1f2a44"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#grad)"/>
+  <g stroke="#ffd166" stroke-width="2" fill="none">
+    <path d="M40 370 L760 370"/>
+    <path d="M60 330 L120 330 L140 300 L200 300 L220 330 L280 330 L300 300 L360 300 L380 330 L440 330 L460 310 L520 310 L540 330 L600 330 L620 300 L680 300 L700 330 L760 330"/>
+  </g>
+  <g fill="#6ea8fe">
+    <rect x="80" y="60" width="200" height="80" rx="10"/>
+    <rect x="300" y="60" width="200" height="80" rx="10"/>
+    <rect x="520" y="60" width="200" height="80" rx="10"/>
+  </g>
+  <text x="180" y="110" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0b1020">Regex</text>
+  <text x="400" y="110" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0b1020">MiniLM + LR</text>
+  <text x="620" y="110" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0b1020">LLM Fallback</text>
+</svg>
+

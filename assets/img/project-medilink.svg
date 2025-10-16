@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="MediLink illustration">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1f2a44"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#grad)"/>
+  <g fill="#0b1020" stroke="#233055">
+    <rect x="80" y="80" width="280" height="280" rx="16"/>
+    <rect x="440" y="80" width="280" height="280" rx="16"/>
+  </g>
+  <g fill="#6ea8fe">
+    <rect x="120" y="120" width="200" height="14" rx="7"/>
+    <rect x="120" y="145" width="160" height="12" rx="6" opacity=".8"/>
+    <rect x="120" y="170" width="180" height="12" rx="6" opacity=".8"/>
+    <rect x="120" y="195" width="150" height="12" rx="6" opacity=".8"/>
+  </g>
+  <g fill="#ffd166">
+    <rect x="480" y="120" width="200" height="14" rx="7"/>
+    <rect x="480" y="145" width="140" height="12" rx="6" opacity=".8"/>
+    <rect x="480" y="170" width="160" height="12" rx="6" opacity=".8"/>
+  </g>
+  <g stroke="#6ea8fe" stroke-width="2" fill="none">
+    <path d="M360 220 C 380 220, 420 220, 440 220"/>
+    <path d="M360 200 C 380 200, 420 200, 440 200" opacity=".5"/>
+    <path d="M360 240 C 380 240, 420 240, 440 240" opacity=".5"/>
+  </g>
+</svg>
+

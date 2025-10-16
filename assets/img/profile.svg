@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Profile placeholder for Shadril Hassan Shifat">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1f2a44"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ea8fe"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg)"/>
+  <circle cx="128" cy="110" r="70" fill="#0b1020" stroke="url(#ring)" stroke-width="6"/>
+  <text x="128" y="125" text-anchor="middle" dominant-baseline="middle" font-family="Lora, Georgia, serif" font-weight="700" font-size="44" fill="#e5e7eb">SHS</text>
+  <rect x="40" y="170" width="176" height="60" rx="24" fill="#0b1020" stroke="#233055"/>
+  <rect x="60" y="185" width="136" height="12" rx="6" fill="#6ea8fe"/>
+  <rect x="60" y="203" width="92" height="10" rx="5" fill="#a8b3cf"/>
+</svg>
+
