@@ -2,62 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shadril Hassan Shifat — Portfolio</title>
-    <meta name="description" content="Portfolio of Shadril Hassan Shifat — Software Engineer and Researcher focused on LLMs, NLP, XAI, RL, and agentic AI. Publications, projects, and experience for PhD applications." />
-    <meta name="theme-color" content="#0f172a" />
+    <title>Shadril Hassan Shifat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Shadril Hassan Shifat — Software Engineer and Researcher specializing in LLMs, NLP, XAI, RL, and agentic AI."
+    />
+    <meta
+      name="keywords"
+      content="Shadril Hassan Shifat, Shadril Shifat, Software Engineer, Researcher, LLMs, NLP, Explainable AI, Reinforcement Learning"
+    />
+    <meta name="author" content="Shadril Hassan Shifat" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Shadril Hassan Shifat — Portfolio" />
-    <meta property="og:description" content="Software Engineer and Researcher focused on LLMs, NLP, XAI, RL, and agentic AI." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/img/profile.svg" />
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Shadril Hassan Shifat - Software Engineer & Researcher" />
+    <meta property="og:description" content="Portfolio of Shadril Hassan Shifat — Software Engineer & Researcher." />
+    <meta property="og:image" content="assets/img/SHIFAT-IMG.jpeg" />
     <meta property="og:url" content="https://shadril238.github.io" />
+    <meta property="og:type" content="website" />
 
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;700&display=swap" rel="stylesheet" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shadril Hassan Shifat - Software Engineer & Researcher" />
+    <meta name="twitter:description" content="Portfolio of Shadril Hassan Shifat — Software Engineer & Researcher." />
+    <meta name="twitter:image" content="assets/img/SHIFAT-IMG.jpeg" />
 
-    <!-- Icons (Font Awesome Free) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6g8mV2v7v2UQxE4U6JmXcS1n0w6tKcZqfLw0t9mYd6Zr2v7mYQf1fGZqXQx2E9q2qgV6J1Z8b5qG0eQqK6Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shadril238.github.io" />
 
-    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Shadril Hassan Shifat",
+        "jobTitle": "Software Engineer & Researcher",
         "url": "https://shadril238.github.io",
-        "image": "https://shadril238.github.io/assets/img/profile.svg",
-        "jobTitle": "Software Engineer & Research Intern",
-        "worksFor": [{
-          "@type": "Organization",
-          "name": "Brain Station 23"
-        }, {
-          "@type": "Organization",
-          "name": "ELITE Research Lab, LLC"
-        }],
+        "image": "https://shadril238.github.io/assets/img/SHIFAT-IMG.jpeg",
         "sameAs": [
+          "https://linkedin.com/in/shadril",
           "https://github.com/shadril238",
-          "https://www.linkedin.com/in/shadril",
           "https://scholar.google.com/citations?user=Edp56d4AAAAJ"
         ],
-        "email": "mailto:shadril.shifat@gmail.com",
-        "telephone": "+8801754402481",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Dhaka",
-          "addressCountry": "Bangladesh"
-        },
+        "worksFor": [
+          { "@type": "Organization", "name": "Brain Station 23" },
+          { "@type": "Organization", "name": "ELITE Research Lab, LLC" }
+        ],
         "knowsAbout": [
           "Large Language Models",
           "Natural Language Processing",
           "Explainable AI",
           "Reinforcement Learning",
           "Agentic AI",
-          "Computer Vision",
           "Microservices",
           "Event-driven systems"
         ]
@@ -66,372 +65,526 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" id="top">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="#top" aria-label="Home">
-          <img src="assets/img/favicon.svg" alt="S logo" width="28" height="28" />
-          <span>Shadril</span>
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#achievements">Achievements</a></li>
-          <li><a href="#references">References</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-            <i class="fa-regular fa-moon"></i>
-          </button>
-          <a class="button button--ghost" href="#publications">For PhD Committees</a>
-        </div>
-      </nav>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Professional Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Technical Skills</a></li>
+        <li><a href="#tests">Tests</a></li>
+        <!-- <li><a href="#certifications">Certifications</a></li> -->
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#references">References</a></li>
+        <li>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">Dark</button>
+        </li>
+      </ul>
+    </nav>
 
-      <section class="hero" id="about">
-        <div class="hero__content container">
-          <figure class="hero__media">
-            <img src="assets/img/profile.svg" width="192" height="192" alt="Portrait of Shadril Hassan Shifat" />
-          </figure>
-          <div class="hero__text">
-            <h1 class="hero__title">Shadril Hassan Shifat</h1>
-            <p class="hero__subtitle">Software Engineer & Researcher — LLMs, NLP, XAI, RL, Agentic AI</p>
-            <p class="hero__lead">
-              I design and build reliable, human-centered AI systems that combine strong engineering with rigorous research. My recent work spans evaluation of multilingual LLM reasoning, multi-agent research pipelines, and production systems (microservices, event-driven architectures) for finance and healthcare. I aim to pursue a PhD to advance trustworthy, explainable, and agentic language technologies, with applications to healthcare and low-resource languages.
-            </p>
-            <div class="contact">
-              <a class="contact__item" href="mailto:shadril.shifat@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i> shadril.shifat@gmail.com</a>
-              <span class="contact__sep" aria-hidden="true">•</span>
-              <a class="contact__item" href="tel:+8801754402481" aria-label="Phone"><i class="fa-solid fa-phone"></i> +8801754402481</a>
-              <span class="contact__sep" aria-hidden="true">•</span>
-              <a class="contact__item" href="https://github.com/shadril238" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/shadril238</a>
-              <span class="contact__sep" aria-hidden="true">•</span>
-              <a class="contact__item" href="https://linkedin.com/in/shadril" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/shadril</a>
-              <span class="contact__sep" aria-hidden="true">•</span>
-              <a class="contact__item" href="https://scholar.google.com/citations?user=Edp56d4AAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-              <span class="contact__sep" aria-hidden="true">•</span>
-              <span class="contact__item"><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</span>
-            </div>
-            <div class="hero__cta">
-              <a class="button" href="#projects"><i class="fa-solid fa-code"></i> View Projects</a>
-              <a class="button button--ghost" href="#publications"><i class="fa-solid fa-book"></i> Publications</a>
-              <a class="button button--ghost" href="assets/Shadril_Hassan_Shifat_CV.pdf"><i class="fa-regular fa-file-pdf"></i> Download CV</a>
-            </div>
-            <p class="last-updated" id="lastUpdated">Updated October 2025</p>
-          </div>
-        </div>
-      </section>
-    </header>
+    <table
+      style="
+        width: 100%;
+        max-width: 800px;
+        border: 0px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+      "
+    >
+      <tbody>
+        <tr>
+          <td style="text-align: center">
+            <p class="name">Shadril Hassan Shifat</p>
+            <p class="title">Software Engineer, Researcher</p>
+          </td>
+        </tr>
+        <tr style="padding: 0px">
+          <td style="padding: 0px">
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr style="padding: 0px">
+                  <td
+                    style="
+                      padding: 2.5%;
+                      width: 40%;
+                      max-width: 40%;
+                      vertical-align: middle;
+                    "
+                  >
+                    <div style="text-align: center">
+                      <img
+                        alt="profile photo"
+                        src="assets/img/SHIFAT-IMG.jpeg"
+                        style="width: 80%; max-width: 80%; height: auto; border-radius: 8px; display: block; margin: 0 auto; object-fit: contain;"
+                      />
+                      <div class="social-links">
+                        <a
+                          href="https://linkedin.com/in/shadril"
+                          title="LinkedIn"
+                          class="social-link"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                            ></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                          </svg>
+                        </a>
 
-    <main id="main">
-      <section class="section" id="research" aria-labelledby="research-title">
-        <div class="container">
-          <div class="section__header">
-            <h2 class="section__title" id="research-title">Research Interests</h2>
-            <p class="section__subtitle">Models that reason, explain, and collaborate in the open world</p>
-          </div>
-          <div class="chips">
-            <span class="chip">Large Language Models (LLMs)</span>
-            <span class="chip">Natural Language Processing (NLP)</span>
-            <span class="chip">Explainable AI (XAI)</span>
-            <span class="chip">Reinforcement Learning (RL)</span>
-            <span class="chip">Agentic AI</span>
-            <span class="chip">Computer Vision (CV)</span>
-          </div>
-          <p class="muted">
-            I am motivated by a central question: how can we build AI systems that reason reliably, explain their decisions, and adapt to human goals in high-stakes domains? My current focus includes: evaluation of mathematical and multilingual reasoning, transparent retrieval-augmented generation, collaborative multi-agent workflows, and safety considerations that make AI dependable in the loop.
-          </p>
-        </div>
-      </section>
+                        <a
+                          href="https://scholar.google.com/citations?user=Edp56d4AAAAJ"
+                          title="Google Scholar"
+                          class="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <path d="M22 10 12 4 2 10l10 6 10-6z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            <path d="M12 22V12"/>
+                          </svg>
+                        </a>
 
-      <section class="section" id="education" aria-labelledby="education-title">
-        <div class="container">
-          <h2 class="section__title" id="education-title">Education</h2>
-          <div class="timeline">
-            <article class="item">
-              <div class="item__meta">
-                <time>Jan 2020 — Sep 2023</time>
-                <span class="tag">CGPA: 3.94/4.00</span>
-              </div>
-              <div class="item__content">
-                <h3 class="item__title">American International University—Bangladesh (AIUB)</h3>
-                <p class="item__subtitle">BSc in Computer Science and Engineering (CSE)</p>
-                <ul class="item__list">
-                  <li><strong>Thesis:</strong> Detecting Mental Health Conditions using Machine Learning (ML) Techniques</li>
-                  <li><strong>Relevant coursework:</strong> Artificial Intelligence, Data Science, HCI, Data Structures & Algorithms, Software Engineering, Advanced DBMS</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+                        <a
+                          href="https://github.com/shadril238"
+                          title="GitHub"
+                          class="social-link"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                            ></path>
+                          </svg>
+                        </a>
 
-      <section class="section" id="experience" aria-labelledby="experience-title">
-        <div class="container">
-          <h2 class="section__title" id="experience-title">Professional Experience</h2>
-          <div class="timeline">
-            <article class="item">
-              <div class="item__meta">
-                <time>Mar 2024 — Present</time>
-                <span class="tag">Dhaka, Bangladesh</span>
-              </div>
-              <div class="item__content">
-                <h3 class="item__title">Software Engineer — <a href="https://brainstation-23.com" target="_blank" rel="noopener">Brain Station 23</a></h3>
-                <ul class="item__list">
-                  <li>Built <em>Pocket eWallet</em>, a distributed MFS platform integrating bank APIs; reduced transaction latency via parallel processing while preserving ordering and consistency constraints in the transaction mechanism.</li>
-                  <li>Developed a centralized email/SMS notification service (<em>Unipet</em>) to unify cross-system messaging, improving reliability, observability, and delivery traceability across services.</li>
-                  <li>Led migration of 18 years of legacy relational data; introduced schema normalization and indexing strategies to improve performance and enable future scalability.</li>
-                  <li>Architected and delivered microservices and event-driven systems across multiple projects, enabling asynchronous, distributed, and fault-tolerant operations with clear SLOs.</li>
-                  <li>Contributed to <em>One by MetLife Bangladesh</em> AI chatbot using LLM-based RAG for customer query automation, with careful prompt design and guardrails.</li>
-                  <li>Implemented Azure DevOps CI/CD pipelines for automated build, test, and multi-environment deployments; improved developer feedback cycles and release confidence.</li>
-                  <li>Mentored junior engineers and interns on engineering best practices, code reviews, and systematic problem solving.
-                  </li>
-                </ul>
-              </div>
-            </article>
+                        <a
+                          href="https://shadril238.github.io"
+                          title="Website"
+                          class="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="padding: 2.5%; width: 63%; vertical-align: middle">
+                    <div id="about">
+                      <p class="bio-text">
+                        I’m Shadril Hassan Shifat, a software engineer and researcher passionate about creating reliable, human-centered AI systems that combine rigorous research with strong engineering. I work at the intersection of applied AI and large-scale software systems, aiming to make intelligent models not only powerful but also interpretable, safe, and reproducible.
+                      </p>
+                      <p class="bio-text">
+                        My experience spans evaluating multilingual LLM reasoning, developing multi-agent research pipelines, and engineering scalable microservices, distributed systems, and event-driven architectures used in production for finance and healthcare applications. I enjoy turning complex AI ideas into real, high-performing systems through clean, maintainable code and thoughtful design.
+                      </p>
+                      <p class="bio-text">
+                        My core focus areas include <strong>Large Language Models (LLMs)</strong>, <strong>Natural Language Processing (NLP)</strong>, <strong>Explainable AI (XAI)</strong>, <strong>Reinforcement Learning (RL)</strong>, and <strong>Agentic AI</strong>. I’m driven by the goal of building models that reason, explain, and collaborate effectively with humans. Across both research and engineering, I emphasize transparency, safety, and reproducibility to ensure that AI systems remain trustworthy and human-aligned.
+                      </p>
+                      <div class="contact-links">
+                        <a
+                          href="mailto:shadril.shifat@gmail.com"
+                          title="Email"
+                          class="contact-link"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                            ></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                          </svg>
+                          <span>shadril.shifat@gmail.com</span><span class="badge">Primary</span>
+                        </a>
+                        <a
+                          href="mailto:shadril.hassan@brainstation-23.com"
+                          title="Work Email"
+                          class="contact-link"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                          </svg>
+                          <span>shadril.hassan@brainstation-23.com</span>
+                        </a>
+                        <!-- <span class="contact-link" title="Location" style="cursor: default;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                          <span>Dhaka, Bangladesh</span>
+                        </span> -->
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-            <article class="item">
-              <div class="item__meta">
-                <time>Dec 2024 — Present</time>
-                <span class="tag">Remote, New York, USA</span>
-              </div>
-              <div class="item__content">
-                <h3 class="item__title">Research Intern — <a href="https://elitelab.ai" target="_blank" rel="noopener">ELITE Research Lab, LLC</a></h3>
-                <ul class="item__list">
-                  <li>Benchmarking LLMs and AI-driven collaborative agents to improve mathematical reasoning in low-resource languages (Bangla), emphasizing rigorous evaluation and error analysis.</li>
-                  <li>Applied research in LLMs, NLP, RL, and generative models with a focus on healthcare, safety, and generalization.</li>
-                  <li>Built a multi-agent deep research pipeline using Llama&nbsp;3.2, RAG, and tool integration; emphasized replicability, provenance tracking, and explainability.
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="education">Education</h2>
+                    <div class="education-item">
+                      <div class="education-header">
+                        <h3>American International University — Bangladesh (AIUB)</h3>
+                        <span class="education-date">Jan 2020 — Sep 2023</span>
+                      </div>
+                      <p class="education-degree">BSc in Computer Science & Engineering (CSE)</p>
+                      <p class="education-grade">CGPA: 3.94/4.00</p>
 
-      <section class="section" id="publications" aria-labelledby="publications-title">
-        <div class="container">
-          <h2 class="section__title" id="publications-title">Research Publications</h2>
-          <ol class="pubs">
-            <li class="pub">
-              Hasan, M. J., Das, A., Matubber, J., <strong>Shifat, S. H.</strong>, &amp; Morol, M. K. (2024). Enhanced Classification of Anxiety, Depression, and Stress Levels: A Comparative Analysis of DASS21 Questionnaire Data Augmentation and Classification Algorithms. <em>Proceedings of the 3rd International Conference on Computing Advancements</em>, 435–442. <a href="https://doi.org/10.1145/3723178.3723236" target="_blank" rel="noopener">doi:10.1145/3723178.3723236</a>
-            </li>
-            <li class="pub">
-              Kabiruzzaman, M., Shidujaman, M., <strong>Shifat, S. H.</strong>, Debnath, P., &amp; Hossain, S. (2024). Time series analysis of care records data for nurse activity recognition in the wild. In <em>Human Activity and Behavior Analysis</em> (pp. 405–415). CRC Press. <a href="https://doi.org/10.1201/9781003371540-28" target="_blank" rel="noopener">doi:10.1201/9781003371540-28</a>
-            </li>
-            <li class="pub">
-              Hasan, M. J., Matubber, J., <strong>Shifat, S. H.</strong>, Hossain, R., Morol, M. K., &amp; Hossen, M. J. (2025). An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection: A Systematic Review and Analysis. <em>Frontiers in Digital Health</em>. <span class="tag tag--soft">Under peer review</span>
-            </li>
-          </ol>
-        </div>
-      </section>
+                      <div class="education-courses">
+                        <h4>Relevant Coursework</h4>
+                        <ul>
+                          <li>Artificial Intelligence</li>
+                          <li>Data Science</li>
+                          <li>Human–Computer Interaction</li>
+                          <li>Data Structures & Algorithms</li>
+                          <li>Software Engineering</li>
+                          <li>Advanced DBMS</li>
+                        </ul>
+                      </div>
+                      <p class="education-grade"><strong>Thesis:</strong> Detecting Mental Health Conditions using Machine Learning (ML) Techniques</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="container">
-          <h2 class="section__title" id="projects-title">Projects</h2>
-          <div class="grid grid--cards">
-            <article class="card">
-              <img class="card__media" src="assets/img/project-deep-research.svg" alt="Deep Research Assistant illustration" />
-              <div class="card__body">
-                <h3 class="card__title">Deep Research Assistant <span class="tag">July 2025</span></h3>
-                <p class="card__text">An end-to-end multi-agent reasoning system with Planner, Searcher, Verifier, Writer, and Evaluator modules to automate cited report generation. Built with Python, Gemini API, Tavily API, and LangChain-style orchestration; Gradio UI and CLI enable autonomous, transparent, and reproducible research workflows.</p>
-              </div>
-              <div class="card__actions">
-                <a class="button button--ghost" href="https://github.com/shadril238/deep-research-assistant" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Project Link</a>
-              </div>
-            </article>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="experience">Professional Experience</h2>
 
-            <article class="card">
-              <img class="card__media" src="assets/img/project-hybrid-log.svg" alt="Hybrid Log Classification illustration" />
-              <div class="card__body">
-                <h3 class="card__title">Hybrid Log Classification <span class="tag">April 2025</span></h3>
-                <p class="card__text">A hybrid production log classifier combining regex for structured patterns, MiniLM embeddings with Logistic Regression for contextual understanding, and an optional LLM fallback. Shipped via FastAPI (CSV upload) and CLI for scalable labeling.</p>
-              </div>
-              <div class="card__actions">
-                <a class="button button--ghost" href="https://github.com/shadril238/hybrid-log-classification-nlp" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Project Link</a>
-              </div>
-            </article>
+                    <div class="experience-item">
+                      <div class="experience-header">
+                        <div class="experience-company">
+                          <h3>Brain Station 23</h3>
+                          <p>Software Engineer</p>
+                          <p>Dhaka, Bangladesh</p>
+                        </div>
+                        <span class="experience-date">Mar 2024 — Present</span>
+                      </div>
 
-            <article class="card">
-              <img class="card__media" src="assets/img/project-resume.svg" alt="AI Resume Analyzer illustration" />
-              <div class="card__body">
-                <h3 class="card__title">AI Resume Analyzer <span class="tag">September 2024</span></h3>
-                <p class="card__text">An AI-powered resume ranking suite with a polished Gradio UI; turns folders of PDF/DOCX into ranked shortlists against job descriptions via sentence-transformer embeddings, keyword boosts, CSV export, optional Ollama refinement, and a Django API.</p>
-              </div>
-              <div class="card__actions">
-                <a class="button button--ghost" href="https://github.com/shadril238/ai_resume_analyzer" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Project Link</a>
-              </div>
-            </article>
+                      <ul class="experience-list">
+                        <li>Built Pocket eWallet, a distributed MFS platform integrating bank APIs; reduced transaction latency via parallel processing while preserving ordering and consistency constraints.</li>
+                        <li>Developed a centralized email/SMS notification service (Unipet), improving reliability, observability, and delivery traceability across services.</li>
+                        <li>Led migration of 18 years of legacy relational data; introduced schema normalization and indexing strategies for performance and scalability.</li>
+                        <li>Architected and delivered microservices and event-driven systems across multiple projects, enabling asynchronous and fault-tolerant operations.</li>
+                        <li>Contributed to One by MetLife Bangladesh chatbot using LLM-based RAG for customer query automation, with prompt design and guardrails.</li>
+                        <li>Implemented Azure DevOps CI/CD pipelines for automated build, test, and multi-environment deployments.</li>
+                        <li>Mentored junior engineers and interns on engineering best practices and systematic problem solving.</li>
+                      </ul>
+                    </div>
 
-            <article class="card">
-              <img class="card__media" src="assets/img/project-medilink.svg" alt="MediLink system illustration" />
-              <div class="card__body">
-                <h3 class="card__title">MediLink — Healthcare Management System <span class="tag">December 2023</span></h3>
-                <p class="card__text">A secure, data-driven healthcare platform with telemedicine and analytics. Built on Spring Boot 3 with a microservices architecture, ChatGPT API integrations, Azure DevOps CI/CD, MySQL, and robust access controls.</p>
-              </div>
-              <div class="card__actions">
-                <a class="button button--ghost" href="https://github.com/shadril238/hms-backend-spring-boot" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Project Link</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+                    <div class="experience-item">
+                      <div class="experience-header">
+                        <div class="experience-company">
+                          <h3>ELITE Research Lab, LLC</h3>
+                          <p>Research Intern</p>
+                          <p>Remote, New York, USA</p>
+                        </div>
+                        <span class="experience-date">Dec 2024 — Present</span>
+                      </div>
 
-      <section class="section" id="skills" aria-labelledby="skills-title">
-        <div class="container">
-          <h2 class="section__title" id="skills-title">Technical Skills</h2>
-          <div class="skills">
-            <div class="skills__group">
-              <h3>Programming</h3>
-              <div class="chips">
-                <span class="chip">Java</span>
-                <span class="chip">Python</span>
-                <span class="chip">C++</span>
-                <span class="chip">JavaScript</span>
-                <span class="chip">R</span>
-                <span class="chip">Matlab</span>
-              </div>
-            </div>
-            <div class="skills__group">
-              <h3>Frameworks & Libraries</h3>
-              <div class="chips">
-                <span class="chip">Spring Boot</span>
-                <span class="chip">FastAPI</span>
-                <span class="chip">PyTorch</span>
-                <span class="chip">Keras</span>
-                <span class="chip">scikit-learn</span>
-                <span class="chip">LangChain</span>
-                <span class="chip">Hugging Face</span>
-              </div>
-            </div>
-            <div class="skills__group">
-              <h3>Databases</h3>
-              <div class="chips">
-                <span class="chip">MSSQL</span>
-                <span class="chip">PostgreSQL</span>
-                <span class="chip">Redis</span>
-                <span class="chip">FAISS</span>
-                <span class="chip">Pinecone</span>
-              </div>
-            </div>
-            <div class="skills__group">
-              <h3>Architecture & Design</h3>
-              <div class="chips">
-                <span class="chip">Microservices</span>
-                <span class="chip">Monolith</span>
-                <span class="chip">Vertical Slice</span>
-                <span class="chip">MVC</span>
-                <span class="chip">REST</span>
-                <span class="chip">CQRS</span>
-                <span class="chip">SOLID</span>
-              </div>
-            </div>
-            <div class="skills__group">
-              <h3>DevOps & Tools</h3>
-              <div class="chips">
-                <span class="chip">Git</span>
-                <span class="chip">CI/CD</span>
-                <span class="chip">Jenkins</span>
-                <span class="chip">Docker</span>
-                <span class="chip">Kubernetes</span>
-                <span class="chip">Linux</span>
-                <span class="chip">Figma</span>
-                <span class="chip">Azure Pipelines</span>
-                <span class="chip">Amazon S3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                      <ul class="experience-list">
+                        <li>Benchmarking LLMs and collaborative agents to improve mathematical reasoning in low‑resource languages (Bangla) with rigorous evaluation.</li>
+                        <li>Applied research in LLMs, NLP, RL, and generative models with a focus on healthcare, safety, and generalization.</li>
+                        <li>Built a multi-agent deep research pipeline using Llama 3.2, RAG, and tool integration with provenance tracking and explainability.</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-      <section class="section" id="tests" aria-labelledby="tests-title">
-        <div class="container">
-          <h2 class="section__title" id="tests-title">Tests</h2>
-          <div class="card card--inline">
-            <div class="card__icon"><i class="fa-solid fa-language"></i></div>
-            <div class="card__body">
-              <h3 class="card__title">IELTS (British Council) — 3 Oct, 2025</h3>
-              <p class="card__text">Overall Band Score 7 &nbsp;•&nbsp; Reading: 7.5 &nbsp;•&nbsp; Listening: 7.0 &nbsp;•&nbsp; Writing: 6.5 &nbsp;•&nbsp; Speaking: 6.5</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="research">Research Publications</h2>
 
-      <section class="section" id="certifications" aria-labelledby="certifications-title">
-        <div class="container">
-          <h2 class="section__title" id="certifications-title">Certifications</h2>
-          <ul class="list">
-            <li><strong>Reinforcement Learning with Gymnasium in Python</strong> — DataCamp (2025)</li>
-            <li><strong>Gen AI E1: Fundamentals</strong> — Brain Station 23 (2024)</li>
-            <li><strong>Machine Learning Specialization</strong> — Coursera (2023)</li>
-            <li><strong>Intermediate Machine Learning</strong> — Kaggle (2021)</li>
-          </ul>
-        </div>
-      </section>
+                    <ol class="pubs">
+                      <li class="pub">
+                        Hasan, M.J., Das, A., Matubber, J., <strong>Shifat, S.H.</strong>, and Morol, M.K. (2024) ‘Enhanced Classification of Anxiety, Depression, and Stress Levels: A Comparative Analysis of DASS21 Questionnaire Data Augmentation and Classification Algorithms’. <em>Proceedings of the 3rd International Conference on Computing Advancements</em>, pp. 435–442. <a href="https://doi.org/10.1145/3723178.3723236" target="_blank" rel="noopener">doi:10.1145/3723178.3723236</a>.
+                      </li>
+                      <li class="pub">
+                        Kabiruzzaman, M., Shidujaman, M., <strong>Shifat, S.H.</strong>, Debnath, P., and Hossain, S. (2024) ‘Time series analysis of care records data for nurse activity recognition in the wild’. In: <em>Human Activity and Behavior Analysis</em>, pp. 405–415. CRC Press. <a href="https://doi.org/10.1201/9781003371540-28" target="_blank" rel="noopener">doi:10.1201/9781003371540-28</a>.
+                      </li>
+                      <li class="pub">
+                        Hasan, M.J., Matubber, J., <strong>Shifat, S.H.</strong>, Hossain, R., Morol, M.K., and Hossen, M.J. (2025) ‘An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection: A Systematic Review and Analysis’. <em>Frontiers in Digital Health</em>. <strong>Status: under peer review.</strong>
+                      </li>
+                    </ol>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-      <section class="section" id="achievements" aria-labelledby="achievements-title">
-        <div class="container">
-          <h2 class="section__title" id="achievements-title">Achievements</h2>
-          <ul class="list">
-            <li>Graduated in the <strong>top 2% of class</strong>, awarded <strong>Magna Cum Laude</strong> for exceptional academic performance.</li>
-            <li>Received <strong>Dean’s List honors (6×)</strong> and academic scholarships every semester for outstanding excellence.</li>
-            <li>Placed Top 10 in the Intra-AIUB Programming Contest (Fall 2021–22).</li>
-            <li>Solved 800+ algorithmic challenges on LeetCode, Codeforces, and HackerRank.</li>
-            <li>Ranked among top teams in Code Samurai 2022 Hackathon, developing AI-driven software solutions.</li>
-          </ul>
-        </div>
-      </section>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="projects">Research & Development Projects</h2>
 
-      <section class="section" id="references" aria-labelledby="references-title">
-        <div class="container">
-          <h2 class="section__title" id="references-title">References</h2>
-          <div class="grid grid--refs">
-            <article class="ref">
-              <h3 class="ref__name">Dr. Mohammad Mahmudul Hasan</h3>
-              <p class="ref__role">Associate Professor, Special Assistant[CS]</p>
-              <p class="ref__org">Department of Computer Science, American International University—Bangladesh (AIUB)</p>
-              <p><a href="mailto:m.hasan@aiub.edu"><i class="fa-regular fa-envelope"></i> m.hasan@aiub.edu</a></p>
-            </article>
-            <article class="ref">
-              <h3 class="ref__name">Md. Kishor Morol</h3>
-              <p class="ref__role">Assistant Professor (On Leave)</p>
-              <p class="ref__org">Department of Computer Science, American International University—Bangladesh (AIUB)</p>
-              <p><a href="mailto:mmorol@stu.edu"><i class="fa-regular fa-envelope"></i> mmorol@stu.edu</a></p>
-            </article>
-          </div>
-        </div>
-      </section>
+                    <div class="project-item">
+                      <div class="project-header">
+                        <div class="project-name"><a href="https://github.com/shadril238/deep-research-assistant" target="_blank" rel="noopener">Deep Research Assistant</a></div>
+                        <span class="project-date">September 2025</span>
+                      </div>
+                      <div class="project-content" style="margin-top: 15px">
+                        <ul class="experience-list">
+                          <li>End-to-end multi-agent reasoning system with Planner, Searcher, Verifier, Writer, and Evaluator modules to automate cited report generation.</li>
+                          <li>Built with Python, Gemini API, Tavily API; LangChain-style orchestration; Gradio UI and CLI enable autonomous, transparent, and reproducible workflows.</li>
+                        </ul>
+                      </div>
+                    </div>
 
-      <section class="section" id="contact" aria-labelledby="contact-title">
-        <div class="container">
-          <h2 class="section__title" id="contact-title">Get in Touch</h2>
-          <p class="muted">I’m actively seeking PhD opportunities in NLP/LLMs, XAI, RL, and agentic AI. I value collaborative, reproducible research with real-world impact, especially in healthcare and low-resource languages.</p>
-          <div class="contact contact--center">
-            <a class="contact__item" href="mailto:shadril.shifat@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
-            <a class="contact__item" href="https://linkedin.com/in/shadril" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a class="contact__item" href="https://github.com/shadril238" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a class="contact__item" href="https://scholar.google.com/citations?user=Edp56d4AAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
-          </div>
-        </div>
-      </section>
-    </main>
+                    <div class="project-item">
+                      <div class="project-header">
+                        <div class="project-name"><a href="https://github.com/shadril238/hybrid-log-classification-nlp" target="_blank" rel="noopener">Hybrid Log Classification</a></div>
+                        <span class="project-date">June 2025</span>
+                      </div>
+                      <div class="project-content" style="margin-top: 15px">
+                        <ul class="experience-list">
+                          <li>Hybrid production log classifier combining regex for structured patterns and MiniLM embeddings with Logistic Regression for context.</li>
+                          <li>Optional LLM fallback; delivered via FastAPI (CSV upload) and CLI for scalable labeling.</li>
+                        </ul>
+                      </div>
+                    </div>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Shadril Hassan Shifat • Built for PhD applications • <a href="#top">Back to top</a></p>
-      </div>
-    </footer>
+                    <div class="project-item">
+                      <div class="project-header">
+                        <div class="project-name"><a href="https://github.com/shadril238/ai_resume_analyzer" target="_blank" rel="noopener">AI Resume Analyzer</a></div>
+                        <span class="project-date">February 2025</span>
+                      </div>
+                      <div class="project-content" style="margin-top: 15px">
+                        <ul class="experience-list">
+                          <li>AI-powered resume ranking suite with Gradio UI; ranks PDF/DOCX against job descriptions using sentence-transformer embeddings and keyword boosts.</li>
+                          <li>CSV export, optional Ollama refinement, and a Django API for integration.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="skills">Technical Skills</h2>
+                    <div class="skills-section">
+                      <div class="skill-group">
+                        <span class="skill-label">Programming:</span>
+                        <span class="skill-items">Java, Python, C++, JavaScript, R, Matlab, SQL</span>
+                      </div>
+                      <div class="skill-group">
+                        <span class="skill-label">Frameworks & Libraries:</span>
+                        <span class="skill-items">Spring Boot, FastAPI, PyTorch, Keras, scikit‑learn, LangChain, Hugging Face</span>
+                      </div>
+                      <div class="skill-group">
+                        <span class="skill-label">Databases:</span>
+                        <span class="skill-items">MSSQL, PostgreSQL, ORACLE, Redis, FAISS, Pinecone, MySQL</span>
+                      </div>
+                      <div class="skill-group">
+                        <span class="skill-label">Architecture & Design:</span>
+                        <span class="skill-items">Monolith, Vertical Slice, MVC, REST, CQRS, SOLID</span>
+                      </div>
+                      <div class="skill-group">
+                        <span class="skill-label">DevOps & Tools:</span>
+                        <span class="skill-items">Git, CI/CD, Jenkins, Docker, Kubernetes, Linux, Figma, Azure Pipelines, Amazon S3</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="tests">Tests</h2>
+                    <div class="experience-item test-item" style="margin-top: 6px;">
+                      <div class="experience-header">
+                        <div class="experience-company">
+                          <h3>IELTS (British Council)</h3>
+                          <p>3 Oct, 2025</p>
+                        </div>
+                        <span class="experience-date">Overall Band Score 7</span>
+                      </div>
+                      <p class="tests-summary">Reading 7.5 • Listening 7.0 • Writing 6.5 • Speaking 6.5</p>
+                    </div>
+<!-- 
+                    <h2 id="certifications">Certifications</h2>
+                    <ul class="achievements-list">
+                      <li><strong>Reinforcement Learning with Gymnasium in Python</strong> — DataCamp (2025)</li>
+                      <li><strong>Gen AI E1: Fundamentals</strong> — Brain Station 23 (2024)</li>
+                      <li><strong>Machine Learning Specialization</strong> — Coursera (2023)</li>
+                      <li><strong>Intermediate Machine Learning</strong> — Kaggle (2021)</li>
+                    </ul> -->
+
+                    <h2 id="achievements">Achievements</h2>
+                    <ul class="achievements-list">
+                      <li>Graduated in the top 2% of class; awarded Magna Cum Laude.</li>
+                      <li>Dean’s List honors (6×) and academic scholarships each semester.</li>
+                      <li>Top 10 in Intra‑AIUB Programming Contest (Fall 2021–22).</li>
+                      <li>Solved 800+ algorithmic challenges on LeetCode, Codeforces, HackerRank.</li>
+                      <li>Ranked among top teams in Code Samurai 2022 Hackathon.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; width: 100%; vertical-align: middle">
+                    <h2 id="references">References</h2>
+                    <ul class="experience-list">
+                      <li>
+                        <strong>Dr. Mohammad Mahmudul Hasan</strong> — Associate Professor, Special Assistant[CS], Department of Computer Science, American International University—Bangladesh (AIUB). 
+                        <a href="mailto:m.hasan@aiub.edu">m.hasan@aiub.edu</a>
+                      </li>
+                      <li>
+                        <strong>Md. Kishor Morol</strong> — Assistant Professor (On Leave), Department of Computer Science, American International University—Bangladesh (AIUB). 
+                        <a href="mailto:mmorol@stu.edu">mmorol@stu.edu</a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <script src="script.js"></script>
   </body>
-  
 </html>

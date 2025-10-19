@@ -1,36 +1,33 @@
 // Shadril Hassan Shifat — Portfolio interactions
 (function () {
   const html = document.documentElement;
-  const modeToggle = document.getElementById('modeToggle');
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-  const toTop = document.getElementById('toTop');
+  const themeToggle = document.getElementById('themeToggle');
 
   // Theme: respect prefers-color-scheme, save user choice
-  const THEME_KEY = 'shadril-theme';
+  const THEME_KEY = 'site-theme';
   const saved = localStorage.getItem(THEME_KEY);
-  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-  if (saved === 'light' || (!saved && prefersLight)) html.classList.add('light');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'dark' || (!saved && prefersDark)) html.classList.add('dark');
+
+  function applyThemeButtonLabel() {
+    if (!themeToggle) return;
+    const isDark = html.classList.contains('dark');
+    const icon = isDark
+      ? '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.36-7.36-1.41 1.41M7.05 16.95l-1.41 1.41M16.95 16.95l1.41 1.41M7.05 7.05 5.64 5.64"/></svg>'
+      : '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    const label = isDark ? 'Light' : 'Dark';
+    themeToggle.innerHTML = icon + '<span>' + label + '</span>';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+  }
 
   function toggleTheme() {
-    html.classList.toggle('light');
-    localStorage.setItem(THEME_KEY, html.classList.contains('light') ? 'light' : 'dark');
+    html.classList.toggle('dark');
+    localStorage.setItem(THEME_KEY, html.classList.contains('dark') ? 'dark' : 'light');
+    applyThemeButtonLabel();
   }
 
-  if (modeToggle) modeToggle.addEventListener('click', toggleTheme);
-
-  // Mobile nav
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      navMenu.classList.toggle('show');
-    });
-    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      navMenu.classList.remove('show');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }));
-  }
+  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+  applyThemeButtonLabel();
 
   // Smooth scroll for on-page links
   document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -45,26 +42,4 @@
       }
     });
   });
-
-  // Back to top button
-  const onScroll = () => {
-    if (!toTop) return;
-    const y = window.scrollY || document.documentElement.scrollTop;
-    toTop.classList.toggle('show', y > 400);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  onScroll();
-
-  // Footer year
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-  // Last updated string (manual + guard)
-  const lastUpdated = document.getElementById('lastUpdated');
-  if (lastUpdated && !lastUpdated.textContent) {
-    const d = new Date();
-    lastUpdated.textContent = `Updated ${d.toLocaleString('default', { month: 'long' })} ${d.getFullYear()}`;
-  }
 })();
-
