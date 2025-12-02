@@ -6,8 +6,12 @@
   // Theme: respect prefers-color-scheme, save user choice
   const THEME_KEY = 'site-theme';
   const saved = localStorage.getItem(THEME_KEY);
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (saved === 'dark' || (!saved && prefersDark)) html.classList.add('dark');
+  // Default to light; only enable dark when the user explicitly chose it
+  if (saved === 'dark') {
+    html.classList.add('dark');
+  } else {
+    html.classList.remove('dark');
+  }
 
   function applyThemeButtonLabel() {
     if (!themeToggle) return;
