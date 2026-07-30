@@ -1,49 +1,43 @@
-# Shadril Hassan Shifat — Portfolio
+# Shadril Hassan Shifat — Academic Portfolio
 
-Static portfolio website for PhD applications. Built with semantic HTML, responsive CSS, and lightweight JS. Ready for GitHub Pages.
+A static academic portfolio for Shadril Hassan Shifat, built with semantic HTML, responsive CSS, and lightweight vanilla JavaScript.
 
-- Repository name: `shadril238.github.io`
-- Live URL: `https://shadril238.github.io`
+Live site: [shadril238.github.io](https://shadril238.github.io)
 
-## Structure
+## Pages
 
-- `index.html` — Main page (About, Research, Experience, Publications, Projects, Skills, Tests, Certifications, Achievements, References, Contact)
-- `stylesheet.css` — Styles (light/dark theme, responsive, print styles)
-- `script.js` — Interactions (dark mode, mobile nav, smooth scroll, back-to-top)
-- `assets/img/` — Placeholder images & favicon
+- `index.html` — About and recent news
+- `publications.html` — Current publications
+- `open-source.html` — Open-source contributions
+- `news.html` — Chronological updates
+- `blogs.html` — Filterable planned research and engineering notes
+- `blog-post.html` — Blog-note detail view
+- `experience.html` — Work experience and education
+- `projects.html` — Selected projects
+- `skills.html` — Technical skills
+
+## Project files
+
+- `stylesheet.css` — Shared visual system, themes, and responsive layout
+- `script.js` — Theme controls and data-driven news/blog rendering
+- `news_data.js` — News entries
+- `blog_data.js` — Planned blog-note metadata
+- `assets/` — Images, project thumbnails, and favicon
 
 ## Local preview
 
-Open `index.html` directly in a browser, or serve via a local server:
+Run a static server from the repository root:
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python -m http.server 8000
 ```
 
-## Deploy to GitHub Pages
+Then open [http://localhost:8000](http://localhost:8000).
 
-1. Create a new public repository named `shadril238.github.io`.
-2. Add these files to the repository root and push to `main`.
-3. GitHub Pages auto-deploys from the root of `main`. Visit `https://shadril238.github.io`.
+## Deployment
 
-Alternatively, for a project site:
-
-1. Use any repository name, push to `main`.
-2. In Settings → Pages → Build and deployment: Source = `Deploy from a branch`, Branch = `main` `/ (root)`.
-
-## Customization
-
-- Replace placeholder images in `assets/img/` with your own.
-- Update links in the header/contact sections as needed.
-- Put your PDF at `assets/Shadril_Hassan_Shifat_CV.pdf` (or update the link in `index.html`).
-- Tweak colors/typography in `stylesheet.css` variables. Toggle default theme by adding/removing `class="light"` on `<html>`.
-
-## Accessibility & Print
-
-- Skip link and focus styles are included.
-- Print styles collapse ornamentation for clean PDF printing.
+GitHub Pages deploys the root of the `main` branch at [shadril238.github.io](https://shadril238.github.io).
 
 ## License
 
-This site’s code is provided for personal portfolio use. Replace personal content with your own before publishing.
+The portfolio source is available under the MIT License.

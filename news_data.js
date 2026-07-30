@@ -1,32 +1,30 @@
 const newsData = [
     {
-        "date": "2026 | January",
-        "content": "Paper Accepted: <strong>‘An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection: A Systematic Review and Analysis’</strong>. <em>Frontiers in Digital Health</em>.",
-        "link": "https://doi.org/10.3389/fdgth.2025.1724348"
+        date: "April 2026",
+        isoDate: "2026-04-18",
+        headline: "Opened a CiteLens pull request to improve the citation network graph with better clarity and interactivity.",
+        details: "Focused on cleaner node spacing, stronger visual grouping, and faster interaction feedback.",
+        link: ""
     },
     {
-        "date": "2025 | February",
-        "content": "Joined <strong style=\"color: #e76f51;\">ELITE Research Lab</strong> as a Research Intern. Working on LLM reasoning and agentic AI pipelines.",
-        "link": "https://elitelab.ai/"
+        date: "April 2026",
+        isoDate: "2026-04-11",
+        headline: "Merged a CiteLens pull request adding BibTeX and CSV export for ranked citation results.",
+        details: "Added export controls and validation to keep download output consistent with ranking filters.",
+        link: ""
     },
     {
-        "date": "2024 | March",
-        "content": "Started working as a Software Engineer at <strong style=\"color: #2a9d8f;\">Brain Station 23</strong>. Building distributed fintech systems.",
-        "link": "https://brainstation-23.com/"
+        date: "March 2026",
+        isoDate: "2026-03-26",
+        headline: "Contributed multiple merged fixes to OpenClaw across plugin handling, logging, and session behavior.",
+        details: "Resolved plugin state edge cases and improved runtime logging for easier debugging.",
+        link: ""
     },
     {
-        "date": "2023 | September",
-        "content": "Graduated from <strong style=\"color: #e9c46a;\">AIUB</strong> with a BSc in Computer Science & Engineering (CGPA 3.94/4.00).",
-        "link": "#"
-    },
-    {
-        "date": "2023 | January",
-        "content": "Published research on <strong>Mental Health Detection</strong> at ICCA 2023.",
-        "link": "#"
-    },
-    {
-        "date": "2022 | December",
-        "content": "Completed undergraduate thesis on Machine Learning applications in healthcare.",
-        "link": "#"
+        date: "February 2026",
+        isoDate: "2026-02-21",
+        headline: "Added and updated current publication entries, including manuscript-under-review status.",
+        details: "Refined publication metadata formatting and status language for clarity.",
+        link: ""
     }
 ];
