@@ -1,51 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        (function () {
-            try {
-                var t = localStorage.getItem("theme");
-                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-                    document.documentElement.classList.add("dark-mode");
-                }
-            } catch (e) {}
-        })();
-    </script>
-    <title>Projects | Shadril Hassan Shifat</title>
-    <meta name="description" content="Selected projects by Shadril Hassan Shifat.">
-    <link rel="stylesheet" href="stylesheet.css?v=20261115a">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Major+Mono+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-</head>
-<body>
-    <header class="topbar">
-        <div class="shell topbar-inner">
-            <a class="brand" href="index.html">Shadril Shifat</a>
-            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <nav class="main-nav" aria-label="Primary">
-                <a href="index.html">About</a>
-                <a href="publications.html">Publications</a>
-                <a href="open-source.html">Open Source</a>
-                <a href="news.html">News</a>
-                <a href="blogs.html">Blogs</a>
-                <a href="experience.html">Experience</a>
-                <a class="active" href="projects.html" aria-current="page">Projects</a>
-                <a href="skills.html">Skills</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="shell content">
+---
+title: Projects
+description: "Selected projects by Shadril Hassan Shifat: multi-agent research systems, log classification, and resume analysis."
+nav: projects
+---
         <section class="section">
             <h1 class="section-title">Selected Projects</h1>
             <ul class="entry-list">
                 <li class="entry-row">
-                    <img class="entry-thumb" src="assets/img/project-deep-research.svg" alt="">
+                    <img class="entry-thumb" src="{{ '/assets/img/' | relative_url }}project-deep-research.svg" width="108" height="78" loading="lazy" alt="">
                     <div>
                         <div class="entry-head"><h3><a href="https://github.com/shadril238/deep-research-assistant" target="_blank" rel="noreferrer">Deep Research Assistant</a></h3><span class="entry-date">Sep 2025</span></div>
                         <p class="body-line">End-to-end multi-agent reasoning system with Planner, Searcher, Verifier, Writer, and Evaluator modules that automate cited report generation, with a Gradio UI and CLI for transparent, reproducible runs.</p>
@@ -53,7 +15,7 @@
                     </div>
                 </li>
                 <li class="entry-row">
-                    <img class="entry-thumb" src="assets/img/project-hybrid-log.svg" alt="">
+                    <img class="entry-thumb" src="{{ '/assets/img/' | relative_url }}project-hybrid-log.svg" width="108" height="78" loading="lazy" alt="">
                     <div>
                         <div class="entry-head"><h3><a href="https://github.com/shadril238/hybrid-log-classification-nlp" target="_blank" rel="noreferrer">Hybrid Log Classification</a></h3><span class="entry-date">Jun 2025</span></div>
                         <p class="body-line">Production log classifier combining regex for structured patterns with MiniLM embeddings and logistic regression for context, plus an optional LLM fallback; served through FastAPI and a CLI.</p>
@@ -61,7 +23,7 @@
                     </div>
                 </li>
                 <li class="entry-row">
-                    <img class="entry-thumb" src="assets/img/project-resume.svg" alt="">
+                    <img class="entry-thumb" src="{{ '/assets/img/' | relative_url }}project-resume.svg" width="108" height="78" loading="lazy" alt="">
                     <div>
                         <div class="entry-head"><h3><a href="https://github.com/shadril238/ai_resume_analyzer" target="_blank" rel="noreferrer">AI Resume Analyzer</a></h3><span class="entry-date">Feb 2025</span></div>
                         <p class="body-line">Ranks PDF/DOCX resumes against job descriptions using sentence-transformer embeddings and keyword boosts, with CSV export, optional Ollama refinement, and a Django API.</p>
@@ -70,12 +32,3 @@
                 </li>
             </ul>
         </section>
-    </main>
-
-    <footer class="shell footer">
-        <p>&copy; 2026 Shadril Hassan Shifat. MIT License.</p>
-    </footer>
-
-    <script src="script.js?v=20261115a"></script>
-</body>
-</html>

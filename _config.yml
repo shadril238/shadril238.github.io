@@ -1,0 +1,28 @@
+title: Shadril Hassan Shifat
+description: "AI researcher (LLM reasoning, agentic AI) and software engineer building distributed fintech systems."
+url: https://shadril238.github.io
+baseurl: ""
+lang: en
+
+author:
+  name: Shadril Hassan Shifat
+  short: S.H. Shifat
+  email: shadril.shifat@gmail.com
+  image: /assets/img/SHIFAT-IMG.jpeg
+  cv: /assets/cv.pdf
+  github: https://github.com/shadril238
+  linkedin: https://linkedin.com/in/shadril
+  scholar: https://scholar.google.com/citations?user=Edp56d4AAAAJ
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

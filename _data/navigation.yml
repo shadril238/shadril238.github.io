@@ -1,0 +1,19 @@
+# Primary navigation. `key` matches a page's `nav` front matter value.
+- key: about
+  title: About
+  url: /
+- key: publications
+  title: Publications
+  url: /publications.html
+- key: experience
+  title: Experience
+  url: /experience.html
+- key: projects
+  title: Projects
+  url: /projects.html
+- key: open-source
+  title: Open Source
+  url: /open-source.html
+- key: cv
+  title: CV
+  url: /assets/cv.pdf

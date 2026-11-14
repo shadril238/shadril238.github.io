@@ -1,0 +1,30 @@
+# Merged pull requests only.
+- name: ResearchScope
+  mark: RS
+  repo: https://github.com/kishormorol/ResearchScope
+  summary: A research discovery platform. I built paper chat for arXiv papers, a conference recommender, a persistent paper library, and a topic network graph.
+  prs:
+    - { number: 30, title: Fix Chat with Paper production issues, merged: Jul 2026 }
+    - { number: 23, title: Add production-ready Chat with Paper for arXiv papers, merged: Jul 2026 }
+    - { number: 8, title: Add topic network graph visualization, merged: Apr 2026 }
+    - { number: 7, title: Add paper library with LocalStorage persistence and My Library page, merged: Apr 2026 }
+    - { number: 6, title: Add conference recommender, merged: Apr 2026 }
+
+- name: CiteLens
+  mark: CL
+  repo: https://github.com/kishormorol/CiteLens
+  summary: A citation-analysis tool. I added export for ranked results and improved the citation network graph.
+  prs:
+    - { number: 2, title: Improve citation network graph, merged: Apr 2026 }
+    - { number: 1, title: Add BibTeX and CSV export for ranked citation results, merged: Apr 2026 }
+
+- name: OpenClaw
+  mark: OC
+  repo: https://github.com/openclaw/openclaw
+  summary: An open-source AI agent runtime. My fixes cover hook logging, plugin warnings, workspace initialization, and Discord session history.
+  prs:
+    - { number: 16222, title: Suppress false duplicate plugin ID warning for symlinked extensions, merged: Feb 2026 }
+    - { number: 12027, title: Don’t auto-create HEARTBEAT.md on workspace init, merged: Feb 2026 }
+    - { number: 11356, title: Apply historyLimit to Discord channel/group sessions to prevent compaction bypass, merged: Feb 2026 }
+    - { number: 11029, title: Replace console logging with subsystem logging in the hook loader, merged: Feb 2026 }
+    - { number: 10730, title: Replace debug console.log with subsystem logging in session-memory, merged: Feb 2026 }

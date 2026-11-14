@@ -1,43 +1,51 @@
 # Shadril Hassan Shifat — Academic Portfolio
 
-A static academic portfolio for Shadril Hassan Shifat, built with semantic HTML, responsive CSS, and lightweight vanilla JavaScript.
+A static academic portfolio for Shadril Hassan Shifat, built with Jekyll (rendered by GitHub Pages), semantic HTML, responsive CSS, and a little vanilla JavaScript.
 
 Live site: [shadril238.github.io](https://shadril238.github.io)
 
 ## Pages
 
-- `index.html` — About and recent news
-- `publications.html` — Current publications
-- `open-source.html` — Open-source contributions
-- `news.html` — Chronological updates
-- `blogs.html` — Filterable planned research and engineering notes
-- `blog-post.html` — Blog-note detail view
-- `experience.html` — Work experience and education
+- `index.html` — About, availability, selected publications, recent news
+- `publications.html` — Publications
+- `experience.html` — Work experience, education, honors, and technical skills
 - `projects.html` — Selected projects
-- `skills.html` — Technical skills
+- `open-source.html` — Merged open-source contributions
+- `news.html` — Full news archive (linked from the homepage)
+- `blogs.html` — Planned notes (kept out of the main menu until the first post ships)
+- `404.html`, `sitemap.xml`, `robots.txt`
+- `skills.html`, `blog-post.html` — redirects kept so old links still work
 
-## Project files
+## Editing content
 
-- `stylesheet.css` — Shared visual system, themes, and responsive layout
-- `script.js` — Theme controls and data-driven news/blog rendering
-- `news_data.js` — News entries
-- `blog_data.js` — Planned blog-note metadata
-- `assets/` — Images, project thumbnails, and favicon
+Most updates are data-only edits in `_data/`:
+
+- `_data/news.yml` — news entries (`date: YYYY-MM-DD`); the homepage shows the newest three
+- `_data/publications.yml` — publications; `selected: true` puts one on the homepage
+- `_data/open_source.yml` — merged pull requests per project
+- `_data/planned_notes.yml` — planned blog notes
+- `_data/navigation.yml` — the main menu
+- `_config.yml` — name, email, CV path, and profile links
+
+Shared markup lives in `_layouts/default.html` (head, SEO/social tags, header, footer) and `_includes/` (icons, news and publication rows). CSS/JS cache-busting is automatic.
+
+**CV:** the menu and homepage link to `assets/cv.pdf`. Add the file at that path.
 
 ## Local preview
 
-Run a static server from the repository root:
+Requires Ruby 3.x (for example `brew install ruby`), then:
 
 ```bash
-python -m http.server 8000
+gem install jekyll -v 3.10.0 kramdown-parser-gfm webrick
+jekyll serve
 ```
 
-Then open [http://localhost:8000](http://localhost:8000).
+Open [http://localhost:4000](http://localhost:4000). A plain static server will not render the Liquid templates.
 
 ## Deployment
 
-GitHub Pages deploys the root of the `main` branch at [shadril238.github.io](https://shadril238.github.io).
+GitHub Pages builds the `main` branch with Jekyll and deploys it to [shadril238.github.io](https://shadril238.github.io).
 
 ## License
 
-The portfolio source is available under the MIT License.
+Site code is available under the MIT License. Written content and images are © Shadril Hassan Shifat, all rights reserved.

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
+    {%- if page.full_title %}
+    {%- assign doc_title = page.full_title %}
+    {%- else %}
+    {%- assign doc_title = page.title | append: " | " | append: site.title %}
+    {%- endif %}
+    {%- assign doc_description = page.description | default: site.description %}
+    {%- assign canonical = page.url | replace: "index.html", "" | absolute_url %}
+    {%- assign share_image = site.author.image | absolute_url %}
+    {%- assign asset_version = site.time | date: "%s" %}
+    <title>{{ doc_title }}</title>
+    <meta name="description" content="{{ doc_description }}">
+    <link rel="canonical" href="{{ canonical }}">
+    {%- if page.noindex %}
+    <meta name="robots" content="noindex">
+    {%- endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.og_title | default: doc_title }}">
+    <meta property="og:description" content="{{ doc_description }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:image" content="{{ share_image }}">
+    <meta property="og:type" content="{% if page.nav == 'about' %}profile{% else %}website{% endif %}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.og_title | default: doc_title }}">
+    <meta name="twitter:description" content="{{ doc_description }}">
+    <meta name="twitter:image" content="{{ share_image }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/stylesheet.css' | relative_url }}?v={{ asset_version }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+    {%- if page.nav == "about" %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ site.author.name }}",
+        "url": "{{ '/' | absolute_url }}",
+        "image": "{{ share_image }}",
+        "jobTitle": "Software Engineer",
+        "worksFor": { "@type": "Organization", "name": "Brain Station 23 PLC.", "url": "https://brainstation-23.com/" },
+        "affiliation": { "@type": "Organization", "name": "ELITE Research Lab", "url": "https://elitelab.ai/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "American International University-Bangladesh" },
+        "knowsAbout": ["Large Language Models", "Natural Language Processing", "Agentic AI", "Explainable AI", "Distributed Systems"],
+        "sameAs": ["{{ site.author.github }}", "{{ site.author.linkedin }}", "{{ site.author.scholar }}"]
+    }
+    </script>
+    {%- endif %}
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="{{ '/' | relative_url }}">Shadril Shifat</a>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false">
+                {% include icons/moon.svg %}{% include icons/sun.svg %}
+            </button>
+            <nav class="main-nav" aria-label="Primary">
+                {%- for item in site.data.navigation %}
+                {%- if item.key == page.nav %}
+                <a class="active" href="{{ item.url | relative_url }}" aria-current="page">{{ item.title }}</a>
+                {%- else %}
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {%- endif %}
+                {%- endfor %}
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="shell content">
+{{ content }}
+    </main>
+
+    <footer class="shell footer">
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. Content and images all rights reserved; site code under the MIT License.</p>
+    </footer>
+
+    <!-- Icons: Font Awesome Free 6.4.2 by @fontawesome, https://fontawesome.com, CC BY 4.0. -->
+    <script src="{{ '/script.js' | relative_url }}?v={{ asset_version }}"></script>
+</body>
+</html>

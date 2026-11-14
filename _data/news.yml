@@ -1,0 +1,25 @@
+# News entries, newest first by `date` (YYYY-MM-DD). Rendered at build time.
+- date: 2026-07-18
+  headline: Shipped “Chat with Paper” for arXiv papers in ResearchScope.
+  details: Two merged pull requests adding production-ready paper chat and follow-up production fixes.
+  link: https://github.com/kishormorol/ResearchScope/pull/23
+
+- date: 2026-04-28
+  headline: Merged three features into ResearchScope, a research discovery platform.
+  details: A conference recommender, a persistent paper library with a My Library page, and a topic network graph.
+  link: https://github.com/kishormorol/ResearchScope/pulls?q=is%3Apr+author%3Ashadril238+is%3Amerged
+
+- date: 2026-04-21
+  headline: Merged two CiteLens pull requests for citation-analysis workflows.
+  details: BibTeX and CSV export for ranked citation results, and a clearer, more interactive citation network graph.
+  link: https://github.com/kishormorol/CiteLens/pulls?q=is%3Apr+author%3Ashadril238+is%3Amerged
+
+- date: 2026-02-14
+  headline: Five fixes merged into OpenClaw, an open-source AI agent runtime.
+  details: Subsystem logging for hooks, plugin-warning and workspace-init fixes, and history limits for Discord group sessions.
+  link: https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3Ashadril238+is%3Amerged
+
+- date: 2026-01-02
+  headline: Our systematic review of machine learning for mental health state detection was published in Frontiers in Digital Health.
+  details: A review of ML methods, datasets, and evaluation practice for detecting mental health conditions.
+  link: https://doi.org/10.3389/fdgth.2025.1724348
