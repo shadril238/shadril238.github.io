@@ -11,7 +11,7 @@ Live site: [shadril238.github.io](https://shadril238.github.io)
 - `experience.html` — Work experience, education, honors, and technical skills
 - `projects.html` — Selected projects
 - `open-source.html` — Merged open-source contributions
-- `news.html` — Full news archive (linked from the homepage)
+- `news.html` — News archive (the homepage shows the latest three)
 - `blogs.html` — Planned notes (kept out of the main menu until the first post ships)
 - `404.html`, `sitemap.xml`, `robots.txt`
 - `skills.html`, `blog-post.html` — redirects kept so old links still work

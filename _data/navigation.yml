@@ -14,6 +14,9 @@
 - key: open-source
   title: Open Source
   url: /open-source.html
+- key: news
+  title: News
+  url: /news.html
 - key: cv
   title: CV
   url: /assets/cv.pdf
