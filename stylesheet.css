@@ -11,7 +11,9 @@
     --accent-warm: #b85c24;
     --tag-bg: #e8f4f1;
     --tag-ink: #287a6d;
+    --warm-bg: #f8ece2;
     --reading-width: 850px;
+    color-scheme: light;
 }
 
 *,
@@ -38,7 +40,7 @@ body {
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-body.dark-mode {
+.dark-mode {
     --page: #11151d;
     --surface: #171c25;
     --ink: #c4c7cd;
@@ -49,6 +51,8 @@ body.dark-mode {
     --accent-warm: #ef955d;
     --tag-bg: #1d3937;
     --tag-ink: #7ecbc0;
+    --warm-bg: #3a2a1f;
+    color-scheme: dark;
 }
 
 .shell {
@@ -488,6 +492,161 @@ a:hover {
 
 .footer p {
     margin: 0;
+}
+
+/* ---------- Additions: academic + industry detail ---------- */
+
+.interest-row,
+.tag-row {
+    margin: 0.6rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+}
+
+.interest-label {
+    margin: 1.1rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.focus-card {
+    padding: 1rem 1.15rem 1.05rem;
+    border: 1px solid var(--rule);
+    border-top: 2px solid var(--accent);
+    background: var(--surface);
+}
+
+.focus-card.eng {
+    border-top-color: var(--tag-ink);
+}
+
+.focus-label {
+    margin: 0 0 0.3rem;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.focus-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--ink);
+    font-family: "Crimson Pro", Georgia, serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.focus-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.focus-card li + li {
+    margin-top: 0.25rem;
+}
+
+.focus-card .more {
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+}
+
+.entry-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.1rem 1rem;
+}
+
+.entry-date {
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.points {
+    margin: 0.5rem 0 0;
+    padding-left: 1.15rem;
+    line-height: 1.5;
+}
+
+.points li + li {
+    margin-top: 0.28rem;
+}
+
+.pub-authors {
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.pub-authors strong {
+    color: var(--ink);
+}
+
+.status {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.04rem 0.45rem;
+    border-radius: 3px;
+    background: var(--tag-bg);
+    color: var(--tag-ink);
+    font: 600 0.68rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: 0.1em;
+    white-space: nowrap;
+}
+
+.status.review {
+    background: var(--warm-bg);
+    color: var(--accent-warm);
+}
+
+.link-chips {
+    margin: 0.45rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.link-chip {
+    padding: 0.08rem 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    color: var(--accent-strong);
+    font: 600 0.74rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.link-chip:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+.entry-row h3 + .meta-line {
+    margin-top: 0.15rem;
+}
+
+@media (max-width: 680px) {
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 860px) {

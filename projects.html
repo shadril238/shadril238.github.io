@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
     <title>Projects | Shadril Hassan Shifat</title>
     <meta name="description" content="Selected projects by Shadril Hassan Shifat.">
-    <link rel="stylesheet" href="stylesheet.css?v=20260730d">
+    <link rel="stylesheet" href="stylesheet.css?v=20261115a">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Major+Mono+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -37,22 +47,25 @@
                 <li class="entry-row">
                     <img class="entry-thumb" src="assets/img/project-deep-research.svg" alt="">
                     <div>
-                        <h3><a href="https://github.com/shadril238/deep-research-assistant" target="_blank" rel="noreferrer">Deep Research Assistant</a></h3>
-                        <p class="body-line">End-to-end multi-agent reasoning system with Planner, Searcher, Verifier, and Writer modules.</p>
+                        <div class="entry-head"><h3><a href="https://github.com/shadril238/deep-research-assistant" target="_blank" rel="noreferrer">Deep Research Assistant</a></h3><span class="entry-date">Sep 2025</span></div>
+                        <p class="body-line">End-to-end multi-agent reasoning system with Planner, Searcher, Verifier, Writer, and Evaluator modules that automate cited report generation, with a Gradio UI and CLI for transparent, reproducible runs.</p>
+                        <ul class="tag-row"><li class="blog-tag">Python</li><li class="blog-tag">Gemini API</li><li class="blog-tag">Tavily</li><li class="blog-tag">Multi-Agent</li><li class="blog-tag">Gradio</li></ul>
                     </div>
                 </li>
                 <li class="entry-row">
                     <img class="entry-thumb" src="assets/img/project-hybrid-log.svg" alt="">
                     <div>
-                        <h3><a href="https://github.com/shadril238/hybrid-log-classification-nlp" target="_blank" rel="noreferrer">Hybrid Log Classification</a></h3>
-                        <p class="body-line">Hybrid production log classifier combining regex and MiniLM embeddings with logistic regression and LLM fallback.</p>
+                        <div class="entry-head"><h3><a href="https://github.com/shadril238/hybrid-log-classification-nlp" target="_blank" rel="noreferrer">Hybrid Log Classification</a></h3><span class="entry-date">Jun 2025</span></div>
+                        <p class="body-line">Production log classifier combining regex for structured patterns with MiniLM embeddings and logistic regression for context, plus an optional LLM fallback; served through FastAPI and a CLI.</p>
+                        <ul class="tag-row"><li class="blog-tag">Python</li><li class="blog-tag">MiniLM</li><li class="blog-tag">scikit-learn</li><li class="blog-tag">FastAPI</li></ul>
                     </div>
                 </li>
                 <li class="entry-row">
                     <img class="entry-thumb" src="assets/img/project-resume.svg" alt="">
                     <div>
-                        <h3><a href="https://github.com/shadril238/ai_resume_analyzer" target="_blank" rel="noreferrer">AI Resume Analyzer</a></h3>
-                        <p class="body-line">Resume ranking suite using sentence-transformer embeddings for JD matching and scoring.</p>
+                        <div class="entry-head"><h3><a href="https://github.com/shadril238/ai_resume_analyzer" target="_blank" rel="noreferrer">AI Resume Analyzer</a></h3><span class="entry-date">Feb 2025</span></div>
+                        <p class="body-line">Ranks PDF/DOCX resumes against job descriptions using sentence-transformer embeddings and keyword boosts, with CSV export, optional Ollama refinement, and a Django API.</p>
+                        <ul class="tag-row"><li class="blog-tag">Python</li><li class="blog-tag">Sentence Transformers</li><li class="blog-tag">Gradio</li><li class="blog-tag">Ollama</li><li class="blog-tag">Django</li></ul>
                     </div>
                 </li>
             </ul>
@@ -63,6 +76,6 @@
         <p>&copy; 2026 Shadril Hassan Shifat. MIT License.</p>
     </footer>
 
-    <script src="script.js?v=20260730d"></script>
+    <script src="script.js?v=20261115a"></script>
 </body>
 </html>

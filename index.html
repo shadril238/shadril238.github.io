@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
     <title>About | Shadril Hassan Shifat</title>
-    <meta name="description" content="About Shadril Hassan Shifat, software engineer and AI researcher.">
-    <link rel="stylesheet" href="stylesheet.css?v=20260730d">
+    <meta name="description" content="Shadril Hassan Shifat: AI researcher (LLM reasoning, agentic AI) and software engineer building distributed fintech systems.">
+    <meta property="og:title" content="Shadril Hassan Shifat">
+    <meta property="og:description" content="AI researcher and software engineer: LLM reasoning, agentic AI, and distributed systems.">
+    <meta property="og:url" content="https://shadril238.github.io/">
+    <meta property="og:image" content="https://shadril238.github.io/assets/img/SHIFAT-IMG.jpeg">
+    <meta property="og:type" content="profile">
+    <link rel="stylesheet" href="stylesheet.css?v=20261115a">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Major+Mono+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -38,7 +53,9 @@
                 <div class="about-text">
                     <p>I am Shadril Hassan Shifat, a software engineer and researcher passionate about building intelligent systems that connect rigorous research with scalable engineering.</p>
                     <p>I am a Software Engineer at <a href="https://brainstation-23.com/" target="_blank" rel="noreferrer">Brain Station 23 PLC.</a>, where I build high-performance distributed fintech systems. I am also a Research Intern at <a href="https://elitelab.ai/" target="_blank" rel="noreferrer">ELITE Research Lab</a>, focusing on LLM reasoning and agentic AI for low-resource languages.</p>
-                    <p>My core interests include Large Language Models, NLP, Explainable AI, and Reinforcement Learning.</p>
+                    <p>Across research and industry, I care about the same things: models that reason and explain their decisions, and systems that are reliable, observable, and reproducible.</p>
+                    <p class="interest-label">Core interests</p>
+                    <ul class="tag-row"><li class="blog-tag">Large Language Models</li><li class="blog-tag">NLP</li><li class="blog-tag">Agentic AI</li><li class="blog-tag">Explainable AI</li><li class="blog-tag">Reinforcement Learning</li><li class="blog-tag">Distributed Systems</li></ul>
                 </div>
                 <figure class="profile">
                     <img src="assets/img/SHIFAT-IMG.jpeg" alt="Shadril Hassan Shifat portrait">
@@ -51,6 +68,60 @@
                 <li><a href="https://linkedin.com/in/shadril" target="_blank" rel="noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://scholar.google.com/citations?user=Edp56d4AAAAJ" target="_blank" rel="noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
             </ul>
+        </section>
+
+        <section class="section" aria-labelledby="focus-title">
+            <h2 id="focus-title" class="section-title">Research &amp; Engineering</h2>
+            <div class="focus-grid">
+                <article class="focus-card">
+                    <p class="focus-label">Research · ELITE Research Lab</p>
+                    <h3>LLM reasoning for low-resource languages</h3>
+                    <ul>
+                        <li>Benchmarking LLMs and collaborative agents on mathematical reasoning in Bangla.</li>
+                        <li>Multi-agent research pipelines with RAG and provenance tracking.</li>
+                        <li>Published work on machine learning for mental health and activity recognition.</li>
+                    </ul>
+                    <p class="more"><a href="publications.html">Publications →</a></p>
+                </article>
+                <article class="focus-card eng">
+                    <p class="focus-label">Industry · Brain Station 23</p>
+                    <h3>Distributed systems for fintech</h3>
+                    <ul>
+                        <li>Built a distributed mobile financial services platform integrating bank APIs.</li>
+                        <li>Led a migration of 18 years of legacy relational data.</li>
+                        <li>Event-driven microservices, an LLM-based RAG chatbot, and CI/CD pipelines.</li>
+                    </ul>
+                    <p class="more"><a href="experience.html">Experience →</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section home-news" aria-labelledby="pubs-title">
+            <h2 id="pubs-title" class="section-title">Selected Publications</h2>
+            <ul class="entry-list">
+                <li class="entry-row">
+                    <p class="entry-time">2025</p>
+                    <div>
+                        <h3>An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection</h3>
+                        <p class="meta-line"><em>Frontiers in Digital Health</em> <span class="status review">Under review</span></p>
+                    </div>
+                </li>
+                <li class="entry-row">
+                    <p class="entry-time">2024</p>
+                    <div>
+                        <h3><a href="https://doi.org/10.1145/3723178.3723236" target="_blank" rel="noreferrer">Enhanced Classification of Anxiety, Depression, and Stress Levels</a></h3>
+                        <p class="meta-line"><em>ICCA 2024</em>, ACM <span class="status">Conference</span></p>
+                    </div>
+                </li>
+                <li class="entry-row">
+                    <p class="entry-time">2024</p>
+                    <div>
+                        <h3><a href="https://doi.org/10.1201/9781003371540-28" target="_blank" rel="noreferrer">Time Series Analysis of Care Records Data for Nurse Activity Recognition</a></h3>
+                        <p class="meta-line"><em>Human Activity and Behavior Analysis</em>, CRC Press <span class="status">Book chapter</span></p>
+                    </div>
+                </li>
+            </ul>
+            <p class="news-more"><a href="publications.html">All publications →</a></p>
         </section>
 
         <section class="section home-news" aria-labelledby="recent-news-title">
@@ -66,7 +137,7 @@
         <p>&copy; 2026 Shadril Hassan Shifat. MIT License.</p>
     </footer>
 
-    <script src="news_data.js?v=20260730d"></script>
-    <script src="script.js?v=20260730d"></script>
+    <script src="news_data.js?v=20261115a"></script>
+    <script src="script.js?v=20261115a"></script>
 </body>
 </html>

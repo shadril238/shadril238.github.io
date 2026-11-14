@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
     <title>Blogs | Shadril Hassan Shifat</title>
     <meta name="description" content="Planned research and engineering notes by Shadril Hassan Shifat.">
-    <link rel="stylesheet" href="stylesheet.css?v=20260730d">
+    <link rel="stylesheet" href="stylesheet.css?v=20261115a">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Major+Mono+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -49,7 +59,7 @@
         <p>&copy; 2026 Shadril Hassan Shifat. MIT License.</p>
     </footer>
 
-    <script src="blog_data.js?v=20260730d"></script>
-    <script src="script.js?v=20260730d"></script>
+    <script src="blog_data.js?v=20261115a"></script>
+    <script src="script.js?v=20261115a"></script>
 </body>
 </html>

@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
     <title>Technical Skills | Shadril Hassan Shifat</title>
     <meta name="description" content="Technical skills of Shadril Hassan Shifat.">
-    <link rel="stylesheet" href="stylesheet.css?v=20260730d">
+    <link rel="stylesheet" href="stylesheet.css?v=20261115a">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Major+Mono+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -36,19 +46,27 @@
             <ul class="entry-list">
                 <li class="entry-row">
                     <p class="entry-time">Languages</p>
-                    <div><p class="body-line">Java, Python, C++, JavaScript, R, SQL</p></div>
+                    <div><ul class="tag-row"><li class="blog-tag">Python</li><li class="blog-tag">Java</li><li class="blog-tag">C++</li><li class="blog-tag">JavaScript</li><li class="blog-tag">SQL</li><li class="blog-tag">R</li><li class="blog-tag">MATLAB</li></ul></div>
+                </li>
+                <li class="entry-row">
+                    <p class="entry-time">AI / ML</p>
+                    <div><ul class="tag-row"><li class="blog-tag">PyTorch</li><li class="blog-tag">Keras</li><li class="blog-tag">scikit-learn</li><li class="blog-tag">Hugging Face</li><li class="blog-tag">LangChain</li><li class="blog-tag">RAG</li></ul></div>
                 </li>
                 <li class="entry-row">
                     <p class="entry-time">Frameworks</p>
-                    <div><p class="body-line">Spring Boot, FastAPI, PyTorch, Keras, LangChain</p></div>
+                    <div><ul class="tag-row"><li class="blog-tag">Spring Boot</li><li class="blog-tag">FastAPI</li><li class="blog-tag">Django</li><li class="blog-tag">Gradio</li></ul></div>
+                </li>
+                <li class="entry-row">
+                    <p class="entry-time">Architecture</p>
+                    <div><ul class="tag-row"><li class="blog-tag">Microservices</li><li class="blog-tag">Event-Driven</li><li class="blog-tag">REST</li><li class="blog-tag">CQRS</li><li class="blog-tag">SOLID</li></ul></div>
                 </li>
                 <li class="entry-row">
                     <p class="entry-time">Databases</p>
-                    <div><p class="body-line">PostgreSQL, MSSQL, Redis, Pinecone, MySQL</p></div>
+                    <div><ul class="tag-row"><li class="blog-tag">PostgreSQL</li><li class="blog-tag">MSSQL</li><li class="blog-tag">Oracle</li><li class="blog-tag">MySQL</li><li class="blog-tag">Redis</li><li class="blog-tag">FAISS</li><li class="blog-tag">Pinecone</li></ul></div>
                 </li>
                 <li class="entry-row">
                     <p class="entry-time">DevOps</p>
-                    <div><p class="body-line">Docker, Kubernetes, Jenkins, Azure Pipelines, Git</p></div>
+                    <div><ul class="tag-row"><li class="blog-tag">Docker</li><li class="blog-tag">Kubernetes</li><li class="blog-tag">Jenkins</li><li class="blog-tag">Azure Pipelines</li><li class="blog-tag">Amazon S3</li><li class="blog-tag">Linux</li><li class="blog-tag">Git</li></ul></div>
                 </li>
             </ul>
         </section>
@@ -58,6 +76,6 @@
         <p>&copy; 2026 Shadril Hassan Shifat. MIT License.</p>
     </footer>
 
-    <script src="script.js?v=20260730d"></script>
+    <script src="script.js?v=20261115a"></script>
 </body>
 </html>

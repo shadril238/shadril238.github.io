@@ -180,10 +180,8 @@ function setThemeIcon(toggle, darkOn) {
     toggle.setAttribute("aria-label", darkOn ? "Switch to light theme" : "Switch to dark theme");
 }
 
-function applyStoredTheme() {
-    const darkOn = localStorage.getItem("theme") === "dark";
-    document.body.classList.toggle("dark-mode", darkOn);
-    return darkOn;
+function isDark() {
+    return document.documentElement.classList.contains("dark-mode");
 }
 
 function hookThemeToggle() {
@@ -192,16 +190,19 @@ function hookThemeToggle() {
         return;
     }
 
-    setThemeIcon(toggle, document.body.classList.contains("dark-mode"));
+    setThemeIcon(toggle, isDark());
     toggle.addEventListener("click", () => {
-        const darkOn = document.body.classList.toggle("dark-mode");
-        localStorage.setItem("theme", darkOn ? "dark" : "light");
+        const darkOn = document.documentElement.classList.toggle("dark-mode");
+        try {
+            localStorage.setItem("theme", darkOn ? "dark" : "light");
+        } catch (error) {
+            /* storage unavailable: theme applies to this page only */
+        }
         setThemeIcon(toggle, darkOn);
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    applyStoredTheme();
     hookThemeToggle();
 
     if (typeof newsData !== "undefined") {

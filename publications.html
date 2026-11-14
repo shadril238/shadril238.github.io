@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
     <title>Current Publications | Shadril Hassan Shifat</title>
     <meta name="description" content="Current publications by Shadril Hassan Shifat.">
-    <link rel="stylesheet" href="stylesheet.css?v=20260730d">
+    <link rel="stylesheet" href="stylesheet.css?v=20261115a">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Major+Mono+Display&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -33,29 +43,32 @@
     <main class="shell content">
         <section class="section">
             <h1 class="section-title">Current Publications</h1>
+            <p class="page-intro">My research spans LLM reasoning for low-resource languages, agentic AI, and machine learning for mental health and healthcare data. A full list is on <a href="https://scholar.google.com/citations?user=Edp56d4AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>.</p>
             <ul class="entry-list">
                 <li class="entry-row">
                     <p class="entry-time">2025</p>
                     <div>
-                        <h3>An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection</h3>
-                        <p class="meta-line">Frontiers in Digital Health</p>
-                        <p class="body-line">Manuscript under review.</p>
+                        <h3>An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection: A Systematic Review and Analysis</h3>
+                        <p class="pub-authors">M.J. Hasan, J. Matubber, <strong>S.H. Shifat</strong>, R. Hossain, M.K. Morol, M.J. Hossen</p>
+                        <p class="meta-line"><em>Frontiers in Digital Health</em> <span class="status review">Under review</span></p>
                     </div>
                 </li>
                 <li class="entry-row">
                     <p class="entry-time">2024</p>
                     <div>
-                        <h3><a href="https://doi.org/10.1145/3723178.3723236" target="_blank" rel="noreferrer">Enhanced Classification of Anxiety, Depression, and Stress Levels</a></h3>
-                        <p class="meta-line">Proceedings of the 3rd International Conference on Computing Advancements</p>
-                        <p class="body-line">DOI: 10.1145/3723178.3723236</p>
+                        <h3><a href="https://doi.org/10.1145/3723178.3723236" target="_blank" rel="noreferrer">Enhanced Classification of Anxiety, Depression, and Stress Levels: A Comparative Analysis of DASS21 Questionnaire Data Augmentation and Classification Algorithms</a></h3>
+                        <p class="pub-authors">M.J. Hasan, A. Das, J. Matubber, <strong>S.H. Shifat</strong>, M.K. Morol</p>
+                        <p class="meta-line"><em>Proceedings of the 3rd International Conference on Computing Advancements (ICCA)</em>, ACM, pp. 435–442 <span class="status">Conference</span></p>
+                        <div class="link-chips"><a class="link-chip" href="https://doi.org/10.1145/3723178.3723236" target="_blank" rel="noreferrer">DOI</a></div>
                     </div>
                 </li>
                 <li class="entry-row">
                     <p class="entry-time">2024</p>
                     <div>
-                        <h3><a href="https://doi.org/10.1201/9781003371540-28" target="_blank" rel="noreferrer">Time Series Analysis of Care Records Data for Nurse Activity Recognition</a></h3>
-                        <p class="meta-line">Human Activity and Behavior Analysis, CRC Press</p>
-                        <p class="body-line">DOI: 10.1201/9781003371540-28</p>
+                        <h3><a href="https://doi.org/10.1201/9781003371540-28" target="_blank" rel="noreferrer">Time Series Analysis of Care Records Data for Nurse Activity Recognition in the Wild</a></h3>
+                        <p class="pub-authors">M. Kabiruzzaman, M. Shidujaman, <strong>S.H. Shifat</strong>, P. Debnath, S. Hossain</p>
+                        <p class="meta-line"><em>Human Activity and Behavior Analysis</em>, CRC Press, pp. 405–415 <span class="status">Book chapter</span></p>
+                        <div class="link-chips"><a class="link-chip" href="https://doi.org/10.1201/9781003371540-28" target="_blank" rel="noreferrer">DOI</a></div>
                     </div>
                 </li>
             </ul>
@@ -66,6 +79,6 @@
         <p>&copy; 2026 Shadril Hassan Shifat. MIT License.</p>
     </footer>
 
-    <script src="script.js?v=20260730d"></script>
+    <script src="script.js?v=20261115a"></script>
 </body>
 </html>
