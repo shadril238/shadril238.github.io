@@ -14,6 +14,11 @@ author:
   linkedin: https://linkedin.com/in/shadril
   scholar: https://scholar.google.com/citations?user=Edp56d4AAAAJ
 
+# Privacy-friendly visitor analytics (GoatCounter: no cookies, no personal data).
+# Set to your GoatCounter site code, or leave empty to disable. Only loaded in
+# production builds (GitHub Pages), never during local `jekyll serve`.
+goatcounter: shadril238
+
 defaults:
   - scope:
       path: ""
