@@ -1,0 +1,47 @@
+# Single source for the Publications page and the homepage "Selected Publications".
+# Set `selected: true` to show an entry on the homepage. Authors matching
+# site.author.short are bolded automatically. Entries without a DOI link the
+# title to `url`; optional `links` (label + url) render as chips, `note` as a line.
+- year: 2026
+  title: "Which Reliability Signal to Trust? Output vs. Representation Space Uncertainty Under Distribution Shift in Pathology Foundation Models"
+  authors: [M.N.B. Sibly, S.H. Shifat, M.S. Ahmed, M.K. Morol]
+  venue: MICCAI 2026 Workshop on Mechanistic Interpretability for Medical Foundation Models (MI4MedFM)
+  details: Springer LNCS
+  type: Workshop
+  note: Presented as a poster at MICCAI 2026, Strasbourg, France.
+  url: https://papers.miccai.org/miccai-2026-sat/MI4MedFM_010.html
+  links:
+    - label: Paper
+      url: https://papers.miccai.org/miccai-2026-sat/MI4MedFM_010.html
+    - label: PDF
+      url: https://papers.miccai.org/miccai-2026-sat/paper/MI4MedFM_010.pdf
+    - label: OpenReview
+      url: https://openreview.net/forum?id=385l0AgNJu
+  selected: true
+
+- year: 2026
+  title: "An In-Depth Exploration of Machine Learning Methods for Mental Health State Detection: A Systematic Review and Analysis"
+  authors: [M.J. Hasan, S.H. Shifat, J. Matubber, R. Hossain, M.A. Rahman, B.M.T. Haque, M.J. Hossen]
+  venue: Frontiers in Digital Health
+  details: Vol. 7
+  type: Journal
+  doi: 10.3389/fdgth.2025.1724348
+  selected: true
+
+- year: 2024
+  title: "Enhanced Classification of Anxiety, Depression, and Stress Levels: A Comparative Analysis of DASS21 Questionnaire Data Augmentation and Classification Algorithms"
+  authors: [M.J. Hasan, A. Das, J. Matubber, S.H. Shifat, M.K. Morol]
+  venue: Proceedings of the 3rd International Conference on Computing Advancements (ICCA)
+  details: ACM, pp. 435–442
+  type: Conference
+  doi: 10.1145/3723178.3723236
+  selected: true
+
+- year: 2024
+  title: "Time Series Analysis of Care Records Data for Nurse Activity Recognition in the Wild"
+  authors: [M. Kabiruzzaman, M. Shidujaman, S.H. Shifat, P. Debnath, S. Hossain]
+  venue: Human Activity and Behavior Analysis
+  details: CRC Press, pp. 405–415
+  type: Book chapter
+  doi: 10.1201/9781003371540-28
+  selected: true

@@ -1,2 +1,7 @@
 AGENTS.md
 *.github.io-main/
+.DS_Store
+_site/
+.jekyll-cache/
+.sass-cache/
+vendor/

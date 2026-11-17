@@ -1,0 +1,12 @@
+<li class="entry-row">
+    <p class="entry-time"><time datetime="{{ include.item.date | date: '%Y-%m-%d' }}">{{ include.item.date | date: "%B %Y" }}</time></p>
+    <div>
+        <h3>{{ include.item.headline }}</h3>
+        {%- if include.item.details %}
+        <p class="body-line">{{ include.item.details }}</p>
+        {%- endif %}
+        {%- if include.item.link %}
+        <p class="meta-line"><a href="{{ include.item.link }}" target="_blank" rel="noreferrer">View details →</a></p>
+        {%- endif %}
+    </div>
+</li>

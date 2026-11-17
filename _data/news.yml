@@ -1,0 +1,49 @@
+# News entries, newest first by `date` (YYYY-MM-DD). Rendered at build time.
+- date: 2026-11-12
+  headline: Promoted to Research Associate at ELITE Research Lab.
+
+- date: 2026-09-27
+  headline: Presented our paper on uncertainty in pathology foundation models as a poster at the MICCAI 2026 conference in Strasbourg, France.
+  details: “Which Reliability Signal to Trust? Output vs. Representation Space Uncertainty Under Distribution Shift in Pathology Foundation Models”, at the MI4MedFM workshop on Mechanistic Interpretability for Medical Foundation Models, MICCAI 2026, Strasbourg Convention Center, France.
+  link: https://papers.miccai.org/miccai-2026-sat/MI4MedFM_010.html
+
+- date: 2026-09-01
+  headline: Started a Master’s in Information and Communication Engineering at Yeungnam University as a KOICA Scholar.
+  details: Joined the Broadband Wireless Communication (BWC) Lab under Prof. Kwonhue Choi as a Research Assistant, working on AI for communication technology.
+  link: https://bwchome2021.wixsite.com/bwcyu
+
+- date: 2026-08-15
+  headline: Concluded my time as a Software Engineer II at Brain Station 23.
+  details: Two and a half years building distributed fintech systems, from Associate Software Engineer to Software Engineer II.
+
+- date: 2026-07-18
+  headline: Shipped “Chat with Paper” for arXiv papers in ResearchScope.
+  details: Two merged pull requests adding production-ready paper chat and follow-up production fixes.
+  link: https://github.com/kishormorol/ResearchScope/pull/23
+
+- date: 2026-07-01
+  headline: Promoted to Senior Research Assistant at ELITE Research Lab.
+
+- date: 2026-04-28
+  headline: Merged three features into ResearchScope, a research discovery platform.
+  details: A conference recommender, a persistent paper library with a My Library page, and a topic network graph.
+  link: https://github.com/kishormorol/ResearchScope/pulls?q=is%3Apr+author%3Ashadril238+is%3Amerged
+
+- date: 2026-04-21
+  headline: Merged two CiteLens pull requests for citation-analysis workflows.
+  details: BibTeX and CSV export for ranked citation results, and a clearer, more interactive citation network graph.
+  link: https://github.com/kishormorol/CiteLens/pulls?q=is%3Apr+author%3Ashadril238+is%3Amerged
+
+- date: 2026-02-14
+  headline: Five fixes merged into OpenClaw, an open-source AI agent runtime.
+  details: Subsystem logging for hooks, plugin-warning and workspace-init fixes, and history limits for Discord group sessions.
+  link: https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3Ashadril238+is%3Amerged
+
+- date: 2026-01-05
+  headline: Became a Research Assistant at ELITE Research Lab.
+  details: Moved up from Research Intern after a year of work on LLM reasoning and agentic AI for low-resource languages.
+
+- date: 2026-01-02
+  headline: Our systematic review of machine learning for mental health state detection was published in Frontiers in Digital Health.
+  details: A review of ML methods, datasets, and evaluation practice for detecting mental health conditions.
+  link: https://doi.org/10.3389/fdgth.2025.1724348

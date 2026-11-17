@@ -11,7 +11,9 @@
     --accent-warm: #b85c24;
     --tag-bg: #e8f4f1;
     --tag-ink: #287a6d;
+    --warm-bg: #f8ece2;
     --reading-width: 850px;
+    color-scheme: light;
 }
 
 *,
@@ -22,12 +24,46 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    flex: 0 0 auto;
+    vertical-align: -0.125em;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0.75rem;
+    z-index: 200;
+    padding: 0.4rem 0.75rem;
+    background: var(--accent-strong);
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.skip-link:focus {
+    top: 0.5rem;
+    color: #ffffff;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 body {
     min-height: 100vh;
     margin: 0;
-    padding-top: 64px;
     display: flex;
     flex-direction: column;
     background: var(--page);
@@ -38,7 +74,7 @@ body {
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-body.dark-mode {
+.dark-mode {
     --page: #11151d;
     --surface: #171c25;
     --ink: #c4c7cd;
@@ -49,6 +85,8 @@ body.dark-mode {
     --accent-warm: #ef955d;
     --tag-bg: #1d3937;
     --tag-ink: #7ecbc0;
+    --warm-bg: #3a2a1f;
+    color-scheme: dark;
 }
 
 .shell {
@@ -57,8 +95,8 @@ body.dark-mode {
 }
 
 .topbar {
-    position: fixed;
-    inset: 0 0 auto;
+    position: sticky;
+    top: 0;
     z-index: 100;
     min-height: 64px;
     background: var(--header);
@@ -81,8 +119,9 @@ body.dark-mode {
     order: 1;
     flex: 0 0 auto;
     color: #d0d4dc;
-    font-family: "Major Mono Display", monospace;
-    font-size: 1.08rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 1rem;
+    font-weight: 600;
     letter-spacing: 0.02em;
     text-decoration: none;
     white-space: nowrap;
@@ -111,6 +150,7 @@ body.dark-mode {
 }
 
 .main-nav a:hover,
+.main-nav a:focus-visible,
 .main-nav a.active {
     border-bottom-color: var(--accent);
     color: #ffffff;
@@ -136,7 +176,15 @@ body.dark-mode {
 .theme-toggle:focus-visible {
     border-color: var(--accent);
     color: #ffffff;
-    outline: none;
+}
+
+.theme-toggle .icon-sun,
+.dark-mode .theme-toggle .icon-moon {
+    display: none;
+}
+
+.dark-mode .theme-toggle .icon-sun {
+    display: inline-block;
 }
 
 .content {
@@ -203,7 +251,13 @@ body.dark-mode {
 
 .about-text p {
     margin: 0 0 0.85rem;
-    text-align: justify;
+}
+
+.about-text .availability {
+    margin: 1.1rem 0 0.4rem;
+    padding: 0.7rem 0.9rem;
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
 }
 
 a {
@@ -223,12 +277,14 @@ a:hover {
 
 .profile img {
     width: 100%;
+    height: auto;
     aspect-ratio: 1 / 1;
     display: block;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
     padding: 4px;
     border: 1px solid var(--rule);
+    border-radius: 50%;
     background: var(--surface);
 }
 
@@ -303,8 +359,8 @@ a:hover {
     border-radius: 50%;
     background: var(--surface);
     color: var(--accent-strong);
-    font-family: "Major Mono Display", monospace;
-    font-size: 0.95rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
@@ -365,7 +421,6 @@ a:hover {
     max-width: 780px;
     margin: 0 0 2.4rem;
     color: var(--muted);
-    text-align: justify;
 }
 
 .filter-bar {
@@ -377,7 +432,7 @@ a:hover {
     color: var(--muted);
 }
 
-.filter-bar > i {
+.filter-bar > .icon {
     margin-right: 0.25rem;
     color: var(--ink);
 }
@@ -397,7 +452,6 @@ a:hover {
 .filter-chip.active {
     border-color: var(--accent);
     color: var(--accent-strong);
-    outline: none;
 }
 
 .blog-list {
@@ -490,9 +544,187 @@ a:hover {
     margin: 0;
 }
 
+/* ---------- Additions: academic + industry detail ---------- */
+
+.interest-row,
+.tag-row {
+    margin: 0.6rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+}
+
+.interest-label {
+    margin: 1.1rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.focus-card {
+    padding: 1rem 1.15rem 1.05rem;
+    border: 1px solid var(--rule);
+    border-top: 2px solid var(--accent);
+    background: var(--surface);
+}
+
+.focus-card.eng {
+    border-top-color: var(--tag-ink);
+}
+
+.focus-label {
+    margin: 0 0 0.3rem;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.focus-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--ink);
+    font-family: "Crimson Pro", Georgia, serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.focus-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.focus-card li + li {
+    margin-top: 0.25rem;
+}
+
+.focus-card .more {
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+}
+
+.entry-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.1rem 1rem;
+}
+
+.entry-date {
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.points {
+    margin: 0.5rem 0 0;
+    padding-left: 1.15rem;
+    line-height: 1.5;
+}
+
+.points li + li {
+    margin-top: 0.28rem;
+}
+
+.pub-authors {
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.pub-authors strong {
+    color: var(--ink);
+}
+
+.status {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.04rem 0.45rem;
+    border-radius: 3px;
+    background: var(--tag-bg);
+    color: var(--tag-ink);
+    font: 600 0.68rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: 0.1em;
+    white-space: nowrap;
+}
+
+.status.review {
+    background: var(--warm-bg);
+    color: var(--accent-warm);
+}
+
+.link-chips {
+    margin: 0.45rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.link-chip {
+    padding: 0.08rem 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    color: var(--accent-strong);
+    font: 600 0.74rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.link-chip:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+.pr-list {
+    margin: 0.5rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.93rem;
+    line-height: 1.5;
+}
+
+.pr-list li + li {
+    margin-top: 0.15rem;
+}
+
+.pr-list a {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+}
+
+.pr-date {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.entry-row h3 + .meta-line {
+    margin-top: 0.15rem;
+}
+
+@media (max-width: 680px) {
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 860px) {
-    body {
-        padding-top: 108px;
+    html {
+        scroll-padding-top: 110px;
     }
 
     .topbar-inner {
@@ -511,17 +743,12 @@ a:hover {
         width: 100%;
         margin: 0;
         padding-top: 0.1rem;
-        gap: 1rem;
-        overflow-x: auto;
-        scrollbar-width: none;
+        flex-wrap: wrap;
+        gap: 0 1.1rem;
     }
 
     .topbar .shell {
         width: min(100% - 2rem, 1120px);
-    }
-
-    .main-nav::-webkit-scrollbar {
-        display: none;
     }
 
     .main-nav a {
@@ -534,6 +761,14 @@ a:hover {
 }
 
 @media (max-width: 680px) {
+    .topbar {
+        position: static;
+    }
+
+    html {
+        scroll-padding-top: 0;
+    }
+
     .shell {
         width: min(100% - 2rem, var(--reading-width));
     }
@@ -545,10 +780,6 @@ a:hover {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
-    }
-
-    .about-text p {
-        text-align: left;
     }
 
     .profile {
@@ -573,10 +804,6 @@ a:hover {
     .entry-thumb,
     .entry-mark {
         margin-bottom: 0.3rem;
-    }
-
-    .page-intro {
-        text-align: left;
     }
 
     .section + .section,
