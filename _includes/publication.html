@@ -4,16 +4,20 @@
     <p class="entry-time">{{ pub.year }}</p>
     <div>
         <h3>{% if pub_url %}<a href="{{ pub_url }}" target="_blank" rel="noreferrer">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
-        {%- if include.full %}
         <p class="pub-authors">
             {%- for author in pub.authors -%}
             {%- if author == site.author.short %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless -%}
             {%- endfor -%}
         </p>
-        {%- endif %}
         <p class="meta-line"><em>{{ pub.venue }}</em>{% if include.full and pub.details %}, {{ pub.details }}{% endif %} <span class="status{% if pub.status_class %} {{ pub.status_class }}{% endif %}">{{ pub.type }}</span></p>
-        {%- if include.full and pub.doi %}
-        <div class="link-chips"><a class="link-chip" href="{{ pub_url }}" target="_blank" rel="noreferrer">DOI</a></div>
+        {%- if include.full and pub.note %}
+        <p class="body-line">{{ pub.note }}</p>
         {%- endif %}
+        {%- if include.full %}{% if pub.doi or pub.links %}
+        <div class="link-chips">
+            {%- if pub.doi %}<a class="link-chip" href="{{ pub_url }}" target="_blank" rel="noreferrer">DOI</a>{% endif %}
+            {%- for link in pub.links %}<a class="link-chip" href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>{% endfor -%}
+        </div>
+        {%- endif %}{% endif %}
     </div>
 </li>

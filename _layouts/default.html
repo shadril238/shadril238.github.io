@@ -51,9 +51,11 @@
         "name": "{{ site.author.name }}",
         "url": "{{ '/' | absolute_url }}",
         "image": "{{ share_image }}",
-        "jobTitle": "Software Engineer",
-        "worksFor": { "@type": "Organization", "name": "Brain Station 23 PLC.", "url": "https://brainstation-23.com/" },
-        "affiliation": { "@type": "Organization", "name": "ELITE Research Lab", "url": "https://elitelab.ai/" },
+        "jobTitle": "Graduate Research Assistant",
+        "affiliation": [
+            { "@type": "CollegeOrUniversity", "name": "Yeungnam University", "url": "https://www.yu.ac.kr/" },
+            { "@type": "Organization", "name": "ELITE Research Lab", "url": "https://elitelab.ai/" }
+        ],
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "American International University-Bangladesh" },
         "knowsAbout": ["Large Language Models", "Natural Language Processing", "Agentic AI", "Explainable AI", "Distributed Systems"],
         "sameAs": ["{{ site.author.github }}", "{{ site.author.linkedin }}", "{{ site.author.scholar }}"]
@@ -86,7 +88,7 @@
     </main>
 
     <footer class="shell footer">
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. Content and images all rights reserved; site code under the MIT License.</p>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
     </footer>
 
     <!-- Icons: Font Awesome Free 6.4.2 by @fontawesome, https://fontawesome.com, CC BY 4.0. -->
