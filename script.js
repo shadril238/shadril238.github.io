@@ -43,7 +43,28 @@ function hookBlogFilters() {
     });
 }
 
+// Analytics events: CV downloads and email clicks (GoatCounter, if loaded).
+function hookAnalyticsEvents() {
+    document.addEventListener("click", (event) => {
+        const link = event.target.closest("a[href]");
+        if (!link || !window.goatcounter || !window.goatcounter.count) {
+            return;
+        }
+        const href = link.getAttribute("href");
+        let path = null;
+        if (/cv\.pdf$/i.test(href)) {
+            path = "cv-download";
+        } else if (href.startsWith("mailto:")) {
+            path = "email-click";
+        }
+        if (path) {
+            window.goatcounter.count({ path, title: link.textContent.trim() || path, event: true });
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     hookThemeToggle();
     hookBlogFilters();
+    hookAnalyticsEvents();
 });

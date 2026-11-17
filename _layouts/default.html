@@ -93,5 +93,8 @@
 
     <!-- Icons: Font Awesome Free 6.4.2 by @fontawesome, https://fontawesome.com, CC BY 4.0. -->
     <script src="{{ '/script.js' | relative_url }}?v={{ asset_version }}"></script>
+    {%- if site.goatcounter and jekyll.environment == "production" %}
+    <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+    {%- endif %}
 </body>
 </html>

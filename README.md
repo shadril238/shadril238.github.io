@@ -31,6 +31,14 @@ Shared markup lives in `_layouts/default.html` (head, SEO/social tags, header, f
 
 **CV:** the menu and homepage link to `assets/cv.pdf`. Add the file at that path.
 
+## Visitor analytics
+
+The site uses [GoatCounter](https://www.goatcounter.com/): no cookies, no personal data, so no consent banner is needed. The script loads only in production builds; set `goatcounter` in `_config.yml` to your site code (empty disables it).
+
+- Dashboard: `https://<code>.goatcounter.com` (visits, referrers, countries, pages)
+- Custom events: `cv-download` and `email-click`
+- To stop counting your own visits, open `https://shadril238.github.io/#toggle-goatcounter` once in each browser you use.
+
 ## Local preview
 
 Requires Ruby 3.x (for example `brew install ruby`), then:
