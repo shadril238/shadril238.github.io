@@ -1,30 +1,66 @@
 ---
 title: Blogs
-description: "Planned research and engineering notes by Shadril Hassan Shifat."
-sitemap: false
+description: "Research and engineering notes by Shadril Hassan Shifat on LLM reasoning, agentic AI, and building reliable systems."
+nav: blogs
 ---
+{%- assign planned = site.data.planned_notes -%}
+{%- capture all_categories -%}
+{%- for post in site.posts %}{{ post.category | default: "General" }}|{% endfor -%}
+{%- for note in planned %}{{ note.tags | first }}|{% endfor -%}
+{%- endcapture -%}
+{%- assign categories = all_categories | split: "|" | uniq -%}
         <section class="section" aria-labelledby="blogs-title">
             <h1 id="blogs-title" class="section-title">Blogs</h1>
-            <p class="page-intro">I use this space to organize ideas from ongoing research and engineering work. Longer articles are in progress; the topics below are planned notes rather than published posts.</p>
-            <div class="filter-bar" role="group" aria-label="Filter planned notes by category">
+            <p class="page-intro">I write here to document what I learn from research and engineering work: how I evaluate reasoning in language models, how I build agentic systems that stay verifiable, and practical lessons from shipping software and contributing to open source.</p>
+
+            {%- if categories.size > 0 %}
+            <div class="filter-bar" role="group" aria-label="Filter posts by category (select one or more)">
                 {% include icons/tag.svg %}
-                <button class="filter-chip active" type="button" data-blog-filter="All" aria-pressed="true">All</button>
-                <button class="filter-chip" type="button" data-blog-filter="Research" aria-pressed="false">Research</button>
-                <button class="filter-chip" type="button" data-blog-filter="Engineering" aria-pressed="false">Engineering</button>
-                <button class="filter-chip" type="button" data-blog-filter="Open Source" aria-pressed="false">Open Source</button>
-            </div>
-            <div id="blog-list" class="blog-list">
-                {%- for note in site.data.planned_notes %}
-                <article class="blog-row" data-tags="{{ note.tags | join: '|' }}">
-                    <h2 class="blog-title">{{ note.title }}</h2>
-                    <div class="blog-meta">
-                        <span>{{ note.status }}</span>
-                        {%- for tag in note.tags %}
-                        <span class="blog-tag">{{ tag }}</span>
-                        {%- endfor %}
-                    </div>
-                    <p class="blog-summary">{{ note.summary }}</p>
-                </article>
+                {%- for category in categories %}
+                <button class="filter-chip cat-{{ category | slugify }}" type="button" data-blog-filter="{{ category }}" aria-pressed="false">{{ category }}</button>
                 {%- endfor %}
+            </div>
+            {%- endif %}
+
+            <div id="blog-list">
+                {%- if site.posts.size > 0 %}
+                <div class="blog-list">
+                    {%- for post in site.posts %}
+                    {%- assign category = post.category | default: "General" %}
+                    {%- assign category_slug = category | slugify %}
+                    <article class="blog-row" data-tags="{{ category }}">
+                        <h2 class="blog-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                        <div class="blog-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+                            {%- for tag in post.tags %}
+                            <span class="cat-tag cat-{{ category_slug }} soft">{{ tag }}</span>
+                            {%- endfor %}
+                        </div>
+                        {%- if post.description %}
+                        <p class="blog-summary">{{ post.description }}</p>
+                        {%- endif %}
+                    </article>
+                    {%- endfor %}
+                </div>
+                {%- endif %}
+
+                {%- if planned.size > 0 %}
+                <h2 class="blog-subhead">Coming soon</h2>
+                <div class="blog-list">
+                    {%- for note in planned %}
+                    {%- assign category = note.tags | first %}
+                    <article class="blog-row planned" data-tags="{{ note.tags | join: '|' }}">
+                        <h3 class="blog-title">{{ note.title }}</h3>
+                        <div class="blog-meta">
+                            <span>{{ note.status }}</span>
+                            {%- for tag in note.tags %}
+                            <span class="cat-tag cat-{{ category | slugify }} soft">{{ tag }}</span>
+                            {%- endfor %}
+                        </div>
+                        <p class="blog-summary">{{ note.summary }}</p>
+                    </article>
+                    {%- endfor %}
+                </div>
+                {%- endif %}
             </div>
         </section>

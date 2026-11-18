@@ -1,5 +1,6 @@
-# Planned (unpublished) notes shown on blogs.html. Blogs is kept out of the
-# primary navigation until the first post is published.
+# Planned (unpublished) notes shown under "Coming soon" on blogs.html.
+# The first tag is the note's category for the filter buttons. Remove an entry
+# once its post is published in _posts/.
 - title: Reasoning and Agentic AI for Low-Resource Languages
   status: Planned
   summary: Notes on evaluation design, retrieval, provenance, and the practical challenges of building reliable reasoning systems for low-resource language settings.
