@@ -8,7 +8,7 @@ author:
   name: Shadril Hassan Shifat
   short: S.H. Shifat
   email: shadril.shifat@gmail.com
-  image: /assets/img/SHIFAT-IMG.jpeg
+  image: /assets/img/SHIFAT-IMG-square.jpg
   cv: /assets/cv.pdf
   github: https://github.com/shadril238
   linkedin: https://linkedin.com/in/shadril
@@ -19,11 +19,25 @@ author:
 # production builds (GitHub Pages), never during local `jekyll serve`.
 goatcounter: shadril238
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 defaults:
   - scope:
       path: ""
     values:
       layout: default
+  # Blog posts live in _posts/YYYY-MM-DD-slug.md and are served at /blogs/slug/.
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: blogs
+      permalink: /blogs/:title/
 
 exclude:
   - README.md

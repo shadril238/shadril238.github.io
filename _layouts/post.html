@@ -1,0 +1,58 @@
+---
+layout: default
+wide: true
+---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign read_minutes = words | divided_by: 200 | at_least: 1 -%}
+{%- assign category_slug = page.category | default: "general" | slugify -%}
+        <div class="post-shell">
+            <article class="post">
+                <p class="post-back"><a href="{{ '/blogs.html' | relative_url }}">← All blogs</a></p>
+                <header class="post-header">
+                    <h1 class="post-title">{{ page.title }}</h1>
+                    {%- if page.description %}
+                    <p class="post-description">{{ page.description }}</p>
+                    {%- endif %}
+                    <p class="post-meta">
+                        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+                        {%- if page.updated %} (Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%B %-d, %Y" }}</time>){% endif %}
+                        <span class="dot" aria-hidden="true">·</span>
+                        <span>{{ read_minutes }} min read</span>
+                    </p>
+                    {%- if page.category or page.tags.size > 0 %}
+                    <ul class="tag-row post-tags">
+                        {%- if page.category %}<li class="cat-tag cat-{{ category_slug }}">{{ page.category }}</li>{% endif %}
+                        {%- for tag in page.tags %}<li class="cat-tag cat-{{ category_slug }} soft">{{ tag }}</li>{% endfor %}
+                    </ul>
+                    {%- endif %}
+                </header>
+
+                <aside class="post-toc" aria-label="Table of contents" hidden>
+                    <p class="post-toc-title">Table of contents</p>
+                    <ol id="post-toc-list"></ol>
+                </aside>
+
+                <div class="post-body" id="post-body">
+{{ content }}
+                </div>
+
+                {%- if page.previous or page.next %}
+                <nav class="post-pager" aria-label="More posts">
+                    {%- if page.previous %}
+                    <a class="pager-prev" href="{{ page.previous.url | relative_url }}"><span>← Older</span>{{ page.previous.title }}</a>
+                    {%- else %}<span></span>{% endif %}
+                    {%- if page.next %}
+                    <a class="pager-next" href="{{ page.next.url | relative_url }}"><span>Newer →</span>{{ page.next.title }}</a>
+                    {%- endif %}
+                </nav>
+                {%- endif %}
+            </article>
+        </div>
+{%- if page.math %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.10/katex.min.css">
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.10/katex.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.10/contrib/auto-render.min.js"></script>
+{%- endif %}
+{%- if page.mermaid %}
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+{%- endif %}
